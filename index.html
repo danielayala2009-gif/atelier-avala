@@ -1,237 +1,32 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#6f1028">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon-192.png">
-<link rel="apple-touch-icon" href="icon-192.png">
-<title>Atelier Ayala — The Culinary Archive</title>
-<style>
-:root{--paper:#f8f2e8;--paper2:#fffaf2;--ink:#2b1916;--wine:#6f1028;--wine2:#8d263d;--gold:#b98a3e;--gold2:#dec58e;--muted:#7f6d62;--line:#e7d8c0;--shadow:0 10px 30px rgba(62,35,24,.10)}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:
-radial-gradient(circle at 10% 0%,rgba(185,138,62,.08),transparent 28rem),
-linear-gradient(180deg,var(--paper2),var(--paper));color:var(--ink);font-family:Georgia,'Times New Roman',serif}
-button,input{font:inherit} button{cursor:pointer}
-.app{max-width:1180px;margin:auto;min-height:100vh;padding-bottom:90px}
-header{position:sticky;top:0;z-index:30;background:rgba(255,250,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.brandbar{display:grid;grid-template-columns:48px 1fr 48px;align-items:center;padding:12px 18px}
-.monogram{width:42px;height:42px;border-radius:14px;background:var(--wine);color:#f5dca7;display:grid;place-items:center;font-size:25px;border:1px solid #c69f5a;box-shadow:var(--shadow)}
-.brand{text-align:center;letter-spacing:.08em;color:var(--wine);font-weight:700;font-size:clamp(22px,4.2vw,34px)}
-.brand small{display:block;font-weight:400;font-style:italic;letter-spacing:.04em;color:#9b6f28;font-size:13px;margin-top:2px}
-.iconbtn{border:0;background:transparent;color:var(--wine);font-size:25px}
-.hero{padding:46px 22px 26px;text-align:center;max-width:850px;margin:auto}
-.kicker{letter-spacing:.28em;font-size:11px;color:var(--wine);text-transform:uppercase}
-.hero h1{font-size:clamp(45px,8vw,82px);margin:10px 0 8px;color:#4b0c1c;line-height:.95}
-.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.6}
-.flourish{color:var(--gold);font-size:25px;margin:14px 0}
-.navtabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 18px 18px;padding:8px;background:#fffaf5;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
-.navtabs button{border:0;background:transparent;padding:12px 7px;border-radius:14px;color:#5e4037;font-size:13px}
-.navtabs button.active{background:#f1e3d2;color:var(--wine);box-shadow:inset 0 -2px var(--wine)}
-.controls{display:flex;gap:10px;padding:0 18px 22px;max-width:900px;margin:auto}
-.search{flex:1;border:1px solid var(--line);background:#fffdf9;border-radius:999px;padding:13px 18px;color:var(--ink);box-shadow:0 4px 14px rgba(62,35,24,.05)}
-.primary{border:0;background:linear-gradient(135deg,var(--wine),var(--wine2));color:#fff7ec;border-radius:999px;padding:12px 18px;box-shadow:var(--shadow);white-space:nowrap}
-.section{padding:0 18px 28px}
-.sectionhead{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto 14px}
-.sectionhead h2{color:var(--wine);font-size:20px;letter-spacing:.04em;margin:0}
-.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.card{background:#fffaf3;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.2s transform,.2s box-shadow}
-.card:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(62,35,24,.14)}
-.photo{height:210px;background:
-radial-gradient(circle at 30% 30%,rgba(255,255,255,.25),transparent 25%),
-linear-gradient(135deg,#b98263,#7a3242);display:grid;place-items:center;font-size:74px;position:relative}
-.photo:after{content:'Add your photograph';position:absolute;bottom:12px;right:14px;background:rgba(44,21,19,.62);color:white;padding:6px 10px;border-radius:999px;font-size:11px;letter-spacing:.04em}
-.cardbody{padding:18px}
-.id{font-size:10px;letter-spacing:.13em;color:#9e7c63}
-.card h3{font-size:24px;color:var(--wine);margin:6px 0 5px;line-height:1.08}
-.category{color:#9b6f28;font-size:14px;margin-bottom:10px}
-.summary{color:#634f46;line-height:1.5;font-size:15px}
-.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.badge{border:1px solid #e0cfae;background:#fffdf8;border-radius:999px;padding:5px 9px;color:#725c4f;font-size:11px}
-.openbtn{margin-top:15px;width:100%;border:1px solid #d8bd8b;background:#fff8ec;color:var(--wine);border-radius:12px;padding:10px;font-weight:700}
-.panel{display:none;max-width:1100px;margin:auto;padding:0 18px 35px} .panel.active{display:block}
-.empty{background:#fffaf3;border:1px dashed #cdb995;border-radius:22px;padding:32px;text-align:center;color:#7e695c}
-.dialog{position:fixed;inset:0;z-index:100;background:rgba(39,19,18,.48);display:none;align-items:flex-end;justify-content:center;padding:0}
-.dialog.open{display:flex}
-.sheet{width:min(820px,100%);max-height:92dvh;overflow:auto;background:#fffaf3;border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.2);border:1px solid #eadac2}
-.sheethero{height:250px;background:linear-gradient(135deg,#ab6a4d,#6f1028);display:grid;place-items:center;font-size:100px;position:relative}
-.close{position:absolute;top:16px;right:16px;background:#fffaf3;border:0;border-radius:999px;width:42px;height:42px;font-size:22px;color:var(--wine)}
-.sheetbody{padding:24px}
-.sheetbody h2{font-size:34px;color:var(--wine);margin:0 0 4px} .sheetbody .category{font-size:16px}
-.detailtabs{display:flex;gap:8px;overflow:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:20px 0}
-.detailtabs button{border:0;background:transparent;color:#765d4f;padding:8px 10px} .detailtabs .active{color:var(--wine);border-bottom:2px solid var(--wine)}
-.detailview{line-height:1.65} .detailview ul,.detailview ol{padding-left:22px}
-.media-drop{border:2px dashed #c9aa72;border-radius:18px;padding:22px;text-align:center;background:#fffdf7}
-.media-drop input{display:block;margin:14px auto}
-.preview{max-width:100%;max-height:320px;border-radius:16px;margin-top:14px}
-.bottomnav{display:none}
-@media(max-width:700px){
-  .app{padding-bottom:86px} .hero{padding-top:28px} .hero p{font-size:16px}
-  .navtabs{display:none} .controls{padding-top:8px} .primary{font-size:0;width:48px;height:48px;padding:0} .primary:after{content:'+';font-size:26px}
-  .grid{grid-template-columns:1fr} .photo{height:225px} .card h3{font-size:26px}
-  .bottomnav{position:fixed;z-index:40;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,250,242,.96);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:7px 8px max(7px,env(safe-area-inset-bottom))}
-  .bottomnav button{border:0;background:transparent;color:#71584d;padding:7px 3px;font-size:11px} .bottomnav button.active{color:var(--wine);font-weight:700}
-  .sheethero{height:220px}
-}
-</style>
-</head>
-<body>
-<div class="app">
-<header>
-  <div class="brandbar">
-    <div class="monogram">A</div>
-    <div class="brand">ATELIER AYALA<small>The Culinary Archive</small></div>
-    <button class="iconbtn" id="searchJump" aria-label="Search">⌕</button>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="kicker">Recipes · Experiments · Table Notes</div>
-  <h1>Atelier Ayala</h1>
-  <div class="flourish">❦</div>
-  <p>Open every card. Preserve every experiment. Attach the media that tells its story.</p>
-</section>
-
-<div class="navtabs">
-  <button class="active" data-panel="recipes">▣<br>Recipes</button>
-  <button data-panel="atlas">◈<br>Atlas</button>
-  <button data-panel="media">▧<br>Media</button>
-  <button data-panel="files">□<br>Files</button>
-</div>
-
-<div class="controls">
-  <input id="search" class="search" placeholder="Search recipes or IDs…">
-  <button class="primary" id="newRecipe">+ New recipe</button>
-</div>
-
-<section id="recipes" class="panel active">
-  <div class="sectionhead"><h2>❦ Recipe Archive</h2><span id="count"></span></div>
-  <div id="grid" class="grid"></div>
-</section>
-
-<section id="atlas" class="panel">
-  <div class="sectionhead"><h2>Atlas</h2></div>
-  <div class="empty"><strong>Technique Atlas</strong><br><br>French Classics → Madeleines · Canelés<br>Flan & Custards → Peach–Grand Marnier Flan Pâtissier<br>Tarts & Pies → Tarte Bourdaloue<br><br>This view is ready to grow into a clickable technique and ingredient map.</div>
-</section>
-
-<section id="media" class="panel">
-  <div class="sectionhead"><h2>Media Drop</h2></div>
-  <div class="media-drop">
-    <strong>Add a photograph to this browser session</strong>
-    <p>Choose a photo from your phone or computer. The preview stays on this device; later we can wire permanent media storage into the archive.</p>
-    <input id="mediaInput" type="file" accept="image/*,video/*,audio/*">
-    <div id="mediaPreview"></div>
-  </div>
-</section>
-
-<section id="files" class="panel">
-  <div class="sectionhead"><h2>Archive Files</h2></div>
-  <div class="empty">Core archive files<br><br><strong>index.html</strong><br><strong>recipes.json</strong><br><strong>manifest.webmanifest</strong><br><strong>sw.js</strong><br><strong>icon-192.png / icon-512.png</strong></div>
-</section>
-</div>
-
-<nav class="bottomnav">
-  <button class="active" data-panel="recipes">▣<br>Recipes</button>
-  <button data-panel="atlas">◈<br>Atlas</button>
-  <button data-panel="media">▧<br>Media</button>
-  <button data-panel="files">□<br>Files</button>
-</nav>
-
-<div id="dialog" class="dialog" role="dialog" aria-modal="true">
-  <article class="sheet">
-    <div id="sheetHero" class="sheethero"><button class="close" id="close">×</button><span id="heroEmoji"></span></div>
-    <div class="sheetbody">
-      <div id="recipeId" class="id"></div>
-      <h2 id="recipeTitle"></h2>
-      <div id="recipeCategory" class="category"></div>
-      <div id="recipeMeta" class="meta"></div>
-      <p id="recipeSummary"></p>
-      <div class="detailtabs">
-        <button class="active" data-detail="overview">Overview</button>
-        <button data-detail="ingredients">Ingredients</button>
-        <button data-detail="method">Method</button>
-        <button data-detail="notes">Notes</button>
-        <button data-detail="media">Media</button>
-      </div>
-      <div id="detailView" class="detailview"></div>
-    </div>
-  </article>
-</div>
-
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#5a1022"><title>Atelier Ayala — The Culinary Archive</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><style>
+:root{--wine:#5a1022;--wine2:#7b2038;--gold:#a7772b;--cream:#f7f0e6;--paper:#fffaf3;--ink:#2c201c;--muted:#7d6c63;--line:#dfd0bd;--shadow:0 14px 40px #3a1b1420}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fbf7f0,#f1e5d5);color:var(--ink);font-family:Georgia,'Times New Roman',serif}button,input{font:inherit}.top{position:sticky;top:0;z-index:20;background:#fffaf3ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topin{max-width:1180px;margin:auto;display:flex;align-items:center;gap:18px;padding:13px 22px}.logo{width:50px;height:50px;border-radius:14px;background:var(--wine);color:#e7c981;border:1px solid #b8883b;display:grid;place-items:center;font-size:34px}.brand{flex:1;text-align:center;color:var(--wine)}.brand b{display:block;font-size:25px;letter-spacing:3px}.brand i{color:var(--gold)}.searchIcon{font-size:28px;color:var(--wine)}main{max-width:1180px;margin:auto;padding:38px 22px 80px}.eyebrow{text-align:center;color:var(--wine2);letter-spacing:5px;font-size:12px}.hero{text-align:center}.hero h1{font-size:64px;color:var(--wine);margin:8px 0}.hero p{font-size:20px;margin:10px auto 28px;max-width:650px}.nav{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.nav button{border:0;background:transparent;padding:15px;color:var(--wine);cursor:pointer}.nav button.active{background:#f0e1d6;font-weight:bold}.tools{display:flex;gap:12px;margin:25px auto 18px;max-width:850px}.tools input{flex:1;border:1px solid var(--line);border-radius:30px;padding:14px 20px;background:white}.primary{border:0;border-radius:28px;background:var(--wine2);color:white;padding:12px 20px}.section{display:none}.section.active{display:block}.sectionTitle{display:flex;justify-content:space-between;align-items:end;margin:25px 0 14px}.sectionTitle h2{color:var(--wine);margin:0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer}.photo{height:240px;background:#7b2038;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}.card:hover img{transform:scale(1.035)}.body{padding:18px}.id{font-size:11px;letter-spacing:2px;color:var(--muted)}.body h3{color:var(--wine);font-size:25px;margin:5px 0}.cat{color:var(--gold);font-size:13px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.chip{border:1px solid var(--line);border-radius:20px;padding:5px 9px;font-size:11px;background:white}.atlasIntro{max-width:760px;margin:15px auto 25px;text-align:center}.mapWrap{position:relative;min-height:650px;background:radial-gradient(circle at 50% 40%,#fffdf8,#ead9c2);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.france{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(54%,500px);aspect-ratio:1;background:#f8eddc;clip-path:polygon(45% 3%,70% 9%,88% 27%,83% 52%,66% 78%,49% 97%,31% 84%,14% 60%,9% 33%,25% 13%);border:2px solid #b99155;filter:drop-shadow(0 12px 20px #5a102220)}.france:after{content:'FRANCE';position:absolute;inset:0;display:grid;place-items:center;color:#b79a70;font-size:42px;letter-spacing:9px;opacity:.35}.pin{position:absolute;width:180px;background:#fffaf3;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 9px 24px #2d170f2a;cursor:pointer}.pin img{width:100%;height:105px;object-fit:cover}.pin b{display:block;color:var(--wine);padding:8px 10px 2px}.pin span{display:block;padding:0 10px 9px;font-size:12px;color:var(--muted)}.bordeaux{left:7%;bottom:10%}.paris{left:43%;top:8%}.lorraine{right:7%;top:23%}.bourdaloue{right:8%;bottom:8%}.library{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.libCard{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;cursor:pointer}.libCard h3{color:var(--wine);margin:0 0 6px}.libCard p{color:var(--muted);font-size:14px}.modal{position:fixed;inset:0;background:#231714a8;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.sheet{width:min(820px,100%);max-height:92vh;overflow:auto;background:var(--paper);border-radius:22px;box-shadow:0 30px 90px #0008}.sheetHero{height:280px;position:relative}.sheetHero img{width:100%;height:100%;object-fit:cover}.close{position:absolute;right:14px;top:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}.sheetBody{padding:24px}.sheetBody h2{font-size:34px;color:var(--wine);margin:3px 0}.tabs{display:flex;gap:20px;border-bottom:1px solid var(--line);margin:20px 0;overflow:auto}.tabs button{border:0;background:none;padding:10px 0;color:var(--muted);white-space:nowrap}.tabs button.on{color:var(--wine);border-bottom:2px solid var(--wine)}.tabPane{line-height:1.6}.linked{display:block;width:100%;text-align:left;border:1px solid var(--line);background:white;border-radius:12px;padding:11px 13px;margin:8px 0;color:var(--wine);cursor:pointer}.linked:after{content:'  →';float:right}.credit{font-size:11px;color:var(--muted);margin-top:18px}.mediaDrop{border:2px dashed var(--line);border-radius:16px;padding:32px;text-align:center;color:var(--muted)}
+@media(max-width:700px){main{padding:24px 14px 70px}.topin{padding:9px 14px}.logo{width:46px;height:46px}.brand b{font-size:20px}.hero h1{font-size:50px;line-height:.95}.hero p{font-size:17px}.nav button{font-size:12px;padding:13px 5px}.tools{flex-direction:column}.grid{grid-template-columns:1fr}.photo{height:230px}.mapWrap{min-height:780px}.france{width:78%;top:49%}.pin{width:145px}.pin img{height:90px}.bordeaux{left:2%;bottom:5%}.paris{left:28%;top:4%}.lorraine{right:2%;top:27%}.bourdaloue{right:3%;bottom:5%}.library{grid-template-columns:1fr}.sheetHero{height:230px}.sheetBody h2{font-size:29px}}
+</style></head><body><header class="top"><div class="topin"><div class="logo">A</div><div class="brand"><b>ATELIER AYALA</b><i>The Culinary Archive</i></div><div class="searchIcon">⌕</div></div></header><main><section class="hero"><div class="eyebrow">RECIPES · EXPERIMENTS · TABLE NOTES</div><h1>Atelier Ayala</h1><div style="color:var(--gold);font-size:28px">❧</div><p>Open every card. Preserve every experiment. Follow ingredients into components, techniques into practice, and pastries back to place.</p></section><nav class="nav"><button class="active" data-sec="recipes">▣<br>Recipes</button><button data-sec="atlas">⌖<br>Atlas</button><button data-sec="techniques">✦<br>Techniques</button><button data-sec="media">▧<br>Media</button></nav>
+<section id="recipes" class="section active"><div class="tools"><input id="q" placeholder="Search recipes, IDs, places or techniques…"><button class="primary">+ New Recipe</button></div><div class="sectionTitle"><h2>Recipe Archive</h2><span id="count"></span></div><div id="recipeGrid" class="grid"></div></section>
+<section id="atlas" class="section"><div class="atlasIntro"><h2 style="color:var(--wine)">The Pastry Atlas</h2><p>A visual journey through the places, traditions and techniques behind the archive. Tap a pastry to travel directly to its card.</p></div><div class="mapWrap"><div class="france"></div><div class="pin bordeaux" data-id="AY-CUL-003"><img src="canele.jpg"><b>Bordeaux</b><span>Canelés de Bordeaux</span></div><div class="pin paris" data-id="AY-CUL-001"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Flan%20p%C3%A2tissier.jpg"><b>Paris</b><span>Flan pâtissier</span></div><div class="pin lorraine" data-id="AY-CUL-002"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Madeleines%20au%20miel%20de%20lavande.jpg"><b>Lorraine</b><span>Madeleines</span></div><div class="pin bourdaloue" data-id="AY-CUL-004"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tarte%20aux%20poires%202a.jpg"><b>Paris</b><span>Tarte Bourdaloue</span></div></div></section>
+<section id="techniques" class="section"><div class="sectionTitle"><h2>Components & Techniques</h2></div><div class="library" id="library"></div></section>
+<section id="media" class="section"><div class="sectionTitle"><h2>Media Cabinet</h2></div><div class="mediaDrop"><h3>Atelier photographs, recordings & files</h3><p>Your own pastry photographs will ultimately take pride of place. Reference imagery is used until an Atelier photograph is assigned.</p><button class="primary">Add media</button></div></section></main>
+<div class="modal" id="modal"><article class="sheet"><div class="sheetHero"><img id="mimg"><button class="close" id="close">×</button></div><div class="sheetBody"><div class="id" id="mid"></div><h2 id="mtitle"></h2><div class="cat" id="mcat"></div><div class="chips" id="mchips"></div><div class="tabs"><button class="on" data-tab="overview">Overview</button><button data-tab="ingredients">Ingredients</button><button data-tab="method">Method</button><button data-tab="notes">Notes</button><button data-tab="media">Media</button></div><div id="pane" class="tabPane"></div></div></article></div>
 <script>
-const recipes=[{"id": "AY-CUL-001", "title": "Peach–Grand Marnier Flan Pâtissier", "category": "French Pastry · Flan", "version": "v1.1", "date": "Aug 2026", "status": "Tested", "summary": "Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.", "accent": "🍑", "ingredients": ["Pâte sucrée shell, frozen before filling", "6 small egg yolks (or 4 large yolks + 1 extra yolk)", "750 g whole milk", "150 g sugar", "45 g cornstarch", "25 g flour", "1 vanilla bean", "Peaches, sliced", "Butter, sugar, orange zest and Grand Marnier for caramelizing"], "method": ["Caramelize the peaches in butter, sugar, orange zest and Grand Marnier; cool completely.", "Heat milk with vanilla. Whisk yolks with sugar, cornstarch and flour.", "Temper the yolk mixture, return to the heat and cook until very thick.", "Layer custard and peaches in the frozen pâte sucrée shell; finish with peaches on top.", "Bake until deeply set and caramelized at the edges. Chill thoroughly before slicing."], "notes": "Two layers of peaches gave the finished flan a more dramatic fruit profile. The extra small yolk strengthened the custard."}, {"id": "AY-CUL-002", "title": "Grand Marnier Madeleines", "category": "French Classics", "version": "v2.0", "date": "Aug 2026", "status": "Tested / evolving", "summary": "Browned-butter madeleines built around Grand Marnier, orange, honey and overnight maturation.", "accent": "🧈", "ingredients": ["2 eggs", "100 g sugar", "120 g flour", "100 g browned butter", "Grand Marnier", "Honey", "Orange zest", "Pinch of salt"], "method": ["Brown the butter and cool until warm, not hot.", "Whisk eggs and sugar until smooth; fold in flour and salt.", "Add browned butter, Grand Marnier, honey and orange zest.", "Cover and refrigerate overnight.", "Bake cold batter in a well-prepared madeleine pan until domed and golden."], "notes": "An overnight rest improves hydration, aroma integration and the characteristic hump."}, {"id": "AY-CUL-003", "title": "Canelés de Bordeaux", "category": "French Classics", "version": "v1.x", "date": "Aug 2026", "status": "Tested / evolving", "summary": "Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.", "accent": "🔥", "ingredients": ["450 g milk", "25 g butter", "1 vanilla bean", "200 g sugar", "95 g flour", "2 eggs + 2 yolks", "Rum or Grand Marnier, optional"], "method": ["Infuse milk with vanilla and butter; cool slightly.", "Combine sugar and flour, then incorporate eggs and yolks without excessive aeration.", "Gradually add warm milk; add spirit if using.", "Rest batter at least overnight.", "Bake in prepared molds with an initial high-heat phase, then reduce heat until mahogany-dark and crisp."], "notes": "The archive tracks mold material, beeswax/butter treatment and the high-heat caramelization window."}, {"id": "AY-CUL-004", "title": "Tarte Bourdaloue — Ayala Variation", "category": "Tarts & Pies", "version": "v1.0", "date": "Aug 2026", "status": "Recovered", "summary": "Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.", "accent": "🍐", "ingredients": ["Pâte sucrée shell", "Almond cream", "Pears", "Vanilla", "Seville orange", "Grand Marnier", "Dark rum"], "method": ["Prepare and chill the pâte sucrée shell.", "Poach pears with vanilla, citrus and spirits; cool and drain.", "Fill shell with almond cream and arrange pears.", "Bake until the almond cream is deeply golden and the pears are glazed."], "notes": "Ayala variation: layered citrus and spirit aromatics added to the classic pear-and-frangipane structure."}];
-const grid=document.getElementById('grid'), search=document.getElementById('search'), count=document.getElementById('count');
-let current=null, currentDetail='overview';
-
-function render(list=recipes){
-  count.textContent=`${list.length} records`;
-  grid.innerHTML=list.map(r=>`
-    <article class="card" data-id="${r.id}">
-      <div class="photo">${r.accent}</div>
-      <div class="cardbody">
-        <div class="id">${r.id}</div>
-        <h3>${r.title}</h3>
-        <div class="category">${r.category}</div>
-        <div class="summary">${r.summary}</div>
-        <div class="meta"><span class="badge">${r.status}</span><span class="badge">${r.version}</span><span class="badge">${r.date}</span></div>
-        <button class="openbtn">Open archive card</button>
-      </div>
-    </article>`).join('');
-  grid.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>openRecipe(c.dataset.id)));
-}
-render();
-
-search.addEventListener('input',()=>{
-  const q=search.value.toLowerCase().trim();
-  render(recipes.filter(r=>JSON.stringify(r).toLowerCase().includes(q)));
-});
-document.getElementById('searchJump').onclick=()=>{search.scrollIntoView({behavior:'smooth',block:'center'});search.focus()};
-
-function switchPanel(id){
- document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));
- document.querySelectorAll('[data-panel]').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));
- window.scrollTo({top:0,behavior:'smooth'});
-}
-document.querySelectorAll('[data-panel]').forEach(b=>b.addEventListener('click',()=>switchPanel(b.dataset.panel)));
-
-function openRecipe(id){
- current=recipes.find(r=>r.id===id); currentDetail='overview';
- document.getElementById('recipeId').textContent=current.id;
- document.getElementById('recipeTitle').textContent=current.title;
- document.getElementById('recipeCategory').textContent=current.category;
- document.getElementById('heroEmoji').textContent=current.accent;
- document.getElementById('recipeSummary').textContent=current.summary;
- document.getElementById('recipeMeta').innerHTML=`<span class="badge">${current.status}</span><span class="badge">${current.version}</span><span class="badge">${current.date}</span>`;
- document.querySelectorAll('[data-detail]').forEach(b=>b.classList.toggle('active',b.dataset.detail==='overview'));
- showDetail();
- document.getElementById('dialog').classList.add('open');
- document.body.style.overflow='hidden';
-}
-function showDetail(){
- let h='';
- if(currentDetail==='overview') h=`<p>${current.summary}</p><p><strong>Status:</strong> ${current.status}<br><strong>Version:</strong> ${current.version}<br><strong>Date:</strong> ${current.date}</p>`;
- if(currentDetail==='ingredients') h='<ul>'+current.ingredients.map(x=>`<li>${x}</li>`).join('')+'</ul>';
- if(currentDetail==='method') h='<ol>'+current.method.map(x=>`<li>${x}</li>`).join('')+'</ol>';
- if(currentDetail==='notes') h=`<p>${current.notes}</p>`;
- if(currentDetail==='media') h=`<div class="media-drop"><strong>Media for ${current.title}</strong><p>Use the main Media tab to preview an image now. Permanent per-recipe media is the next archive upgrade.</p></div>`;
- document.getElementById('detailView').innerHTML=h;
-}
-document.querySelectorAll('[data-detail]').forEach(b=>b.addEventListener('click',()=>{
- currentDetail=b.dataset.detail; document.querySelectorAll('[data-detail]').forEach(x=>x.classList.toggle('active',x===b)); showDetail();
-}));
-document.getElementById('close').onclick=()=>{document.getElementById('dialog').classList.remove('open');document.body.style.overflow=''};
-document.getElementById('dialog').addEventListener('click',e=>{if(e.target.id==='dialog') document.getElementById('close').click()});
-document.getElementById('newRecipe').onclick=()=>alert('New Recipe editor is staged for the next build. This version protects the four recovered archive records.');
-
-document.getElementById('mediaInput').addEventListener('change',e=>{
- const f=e.target.files[0]; if(!f)return;
- const url=URL.createObjectURL(f), box=document.getElementById('mediaPreview');
- if(f.type.startsWith('image/')) box.innerHTML=`<img class="preview" src="${url}" alt="Uploaded preview">`;
- else if(f.type.startsWith('video/')) box.innerHTML=`<video class="preview" src="${url}" controls></video>`;
- else if(f.type.startsWith('audio/')) box.innerHTML=`<audio src="${url}" controls></audio>`;
-});
-if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
-</script>
-</body>
-</html>
+const components={
+'component-pate-sucree':{title:'Pâte Sucrée',type:'Master Component',text:'A crisp, sweet French tart shell. This is a reusable master component: every tart that calls for pâte sucrée links here instead of duplicating the formula.',details:'Core workflow: cream or sablage method → controlled mixing → rest → roll evenly → line ring → chill/freeze → bake according to the final tart.'},
+'component-flan-base':{title:'Flan Pâtissier Base',type:'Master Component',text:'Vanilla milk custard thickened before baking. Designed as the structural filling for AY-CUL-001.',details:'Technique chain: infuse vanilla → temper yolks → return to heat → thicken fully → assemble → bake.'},
+'component-peaches':{title:'Grand Marnier Caramelized Peaches',type:'Atelier Component',text:'Peaches caramelized with butter, sugar, orange zest and Grand Marnier.',details:'Cool before layering into the flan so the hot fruit does not loosen the prepared custard.'},
+'component-almond-cream':{title:'Crème d’Amande',type:'Master Component',text:'Classical almond cream for baked tarts such as Bourdaloue.',details:'A foundational component to be expanded with the exact Atelier formula and testing notes.'},
+'tech-brown-butter':{title:'Beurre Noisette / Brown Butter',type:'Technique',text:'Butter cooked until milk solids toast and develop hazelnut-like aromas.',details:'Watch aroma and sediment color rather than relying on foam alone; cool before folding into delicate batters.'},
+'tech-canele-flour':{title:'Canelé Flour & Batter Handling',type:'Technique',text:'Flour choice and mixing affect batter structure and the final custardy interior.',details:'The Atelier record preserves flour comparisons and maturation as experimental variables.'},
+'tech-poach-pears':{title:'Poaching Pears',type:'Technique',text:'Gentle poaching gives Bourdaloue pears tenderness while retaining clean slices.',details:'Poaching liquid can carry vanilla, citrus and spirit notes; cool and drain well before assembly.'},
+'tech-temper':{title:'Tempering Yolks',type:'Technique',text:'Gradually introduce hot liquid into yolks while whisking, then return the mixture to heat.',details:'Used in the flan pâtissier base to control coagulation and create a smooth custard.'}
+}; let recipes=[],current=null,currentTab='overview';
+fetch('recipes.json').then(r=>r.json()).then(d=>{recipes=d.recipes;render(recipes);renderLib()});
+function render(list){count.textContent=list.length+' records';recipeGrid.innerHTML=list.map(r=>`<article class="card" data-id="${r.id}"><div class="photo"><img src="${r.photo}" alt="${r.title}"></div><div class="body"><div class="id">${r.id}</div><h3>${r.title}</h3><div class="cat">${r.category}</div><p>${r.summary}</p><div class="chips"><span class="chip">${r.version}</span><span class="chip">${r.date}</span><span class="chip">⌖ ${r.region}</span></div></div></article>`).join('');document.querySelectorAll('.card').forEach(x=>x.onclick=()=>openRecipe(x.dataset.id))}
+q.oninput=e=>{let s=e.target.value.toLowerCase();render(recipes.filter(r=>JSON.stringify(r).toLowerCase().includes(s)))};
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(b.dataset.sec).classList.add('active')});
+document.querySelectorAll('.pin').forEach(p=>p.onclick=()=>openRecipe(p.dataset.id));
+function openRecipe(id){current=recipes.find(r=>r.id===id);if(!current)return;mimg.src=current.photo;mid.textContent=current.id;mtitle.textContent=current.title;mcat.textContent=current.category;mchips.innerHTML=`<span class=chip>${current.version}</span><span class=chip>${current.date}</span><span class=chip>⌖ ${current.region}</span>`;currentTab='overview';document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab==='overview'));showTab();modal.classList.add('open')}
+function showTab(){if(currentTab==='overview')pane.innerHTML=`<p>${current.summary}</p><p><b>Archive relationship:</b> This card links outward to reusable components, techniques and its place in the Pastry Atlas.</p>`;if(currentTab==='ingredients')pane.innerHTML=current.ingredients.map(i=>i.link?`<button class="linked" data-link="${i.link}">${i.text}</button>`:`<div class="linked" style="cursor:default">${i.text}</div>`).join('');if(currentTab==='method')pane.innerHTML='<ol>'+current.method.map(x=>`<li>${x}</li>`).join('')+'</ol>';if(currentTab==='notes')pane.innerHTML=`<p>${current.notes}</p>`;if(currentTab==='media')pane.innerHTML=`<div class="mediaDrop">Add your Atelier photographs, video or audio notes for <b>${current.title}</b>.</div><div class="credit">Reference images: canelé reference from cotta.jp; other reference photographs are linked from Wikimedia Commons. Replace reference imagery with your own Atelier photographs whenever available.</div>`;pane.querySelectorAll('[data-link]').forEach(x=>x.onclick=()=>openComponent(x.dataset.link))}
+function openComponent(id){let c=components[id];pane.innerHTML=`<button class="linked" onclick="currentTab='ingredients';showTab()">← Back to ingredients</button><div class="id">${c.type}</div><h3 style="color:var(--wine);font-size:28px">${c.title}</h3><p>${c.text}</p><p>${c.details}</p><div class="chips"><span class="chip">Reusable archive record</span><span class="chip">Linked component</span></div>`}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{currentTab=b.dataset.tab;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));showTab()});close.onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
+function renderLib(){library.innerHTML=Object.entries(components).map(([id,c])=>`<article class="libCard" data-c="${id}"><div class="id">${c.type}</div><h3>${c.title}</h3><p>${c.text}</p><span class="cat">Open technique →</span></article>`).join('');document.querySelectorAll('.libCard').forEach(x=>x.onclick=()=>{let c=components[x.dataset.c];alert(c.title+'\n\n'+c.text+'\n\n'+c.details)})}
+if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js');
+</script></body></html>

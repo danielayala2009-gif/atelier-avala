@@ -1,13 +1,12 @@
-ATELIER AYALA v1 — POLISHED MOBILE ARCHIVE
-Files:
-- index.html
-- recipes.json
-- manifest.webmanifest
-- sw.js
-- icon-192.png
-- icon-512.png
+ATELIER AYALA v3 — INTERCONNECTED CULINARY ATLAS
 
-GitHub Pages:
-Upload all six files to the root of the atelier-ayala repository.
-Existing Android shortcut can remain; after GitHub redeploys, reopen it.
-For a refreshed custom icon, remove the old shortcut and add/install it again after deployment.
+Upload every file in this folder to the ROOT of the atelier-avala GitHub repository.
+This release adds:
+- photographic pastry cards
+- an illustrated France pastry atlas
+- clickable recipe components
+- clickable technique library
+- cross-links between recipes, components, techniques and places
+- PWA/mobile app support
+
+Reference photographs are used as visual reference imagery and credited in-app. Replace them with your own Atelier photographs as your archive grows.
