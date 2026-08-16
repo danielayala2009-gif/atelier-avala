@@ -1,1 +1,14 @@
-{"name":"Atelier Ayala — The Culinary Archive","short_name":"Atelier Ayala","start_url":"./","display":"standalone","background_color":"#f7f0e6","theme_color":"#5a1022","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"}]}
+{
+  "name":"Atelier Ayala — The Culinary Atlas",
+  "short_name":"Atelier Ayala",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f4eee4",
+  "theme_color":"#67172b",
+  "description":"An interconnected culinary archive of recipes, components, techniques, places and media.",
+  "icons":[
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

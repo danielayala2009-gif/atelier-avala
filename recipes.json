@@ -1,8 +1,168 @@
 {
   "recipes": [
-    {"id":"AY-CUL-001","title":"Peach–Grand Marnier Flan Pâtissier","category":"French Pastry · Flan","version":"v1.1","date":"Aug 2026","region":"Paris / Île-de-France","photo":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Flan%20p%C3%A2tissier.jpg","summary":"Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.","ingredients":[{"text":"1 batch Pâte sucrée","link":"component-pate-sucree"},{"text":"Vanilla custard / flan base","link":"component-flan-base"},{"text":"Caramelized Grand Marnier peaches","link":"component-peaches"}],"method":["Freeze the lined pâte sucrée shell until firm.","Prepare the flan base, tempering the yolks before returning the mixture to the stove to thicken.","Cool the caramelized peaches before assembly.","Layer flan base, peaches, remaining flan base, then peaches on top.","Bake until the center is set with a slight movement and the surface is deeply caramelized. Cool completely before chilling."],"notes":"Atelier test: two layers of peaches; no cream; one additional small yolk used in the tested batch."},
-    {"id":"AY-CUL-002","title":"Grand Marnier Madeleines","category":"French Classics","version":"v2.0","date":"Aug 2026","region":"Lorraine","photo":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Madeleines%20au%20miel%20de%20lavande.jpg","summary":"Browned-butter madeleines built around Grand Marnier, orange, honey and overnight maturation.","ingredients":[{"text":"Brown butter","link":"tech-brown-butter"},{"text":"Eggs, sugar, flour and honey"},{"text":"Grand Marnier and orange zest"}],"method":["Prepare the batter and fold in cooled browned butter.","Cover and mature overnight in the refrigerator.","Pipe or spoon cold batter into prepared madeleine molds and bake for a pronounced hump."],"notes":"Developed as a two-dozen batch; overnight maturation preferred."},
-    {"id":"AY-CUL-003","title":"Canelés de Bordeaux","category":"French Classics","version":"v1.x","date":"Aug 2026","region":"Bordeaux","photo":"canele.jpg","summary":"Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.","ingredients":[{"text":"Milk, vanilla, sugar, eggs/yolks"},{"text":"Flour","link":"tech-canele-flour"},{"text":"Butter"},{"text":"Rum or Grand Marnier — optional test variable"}],"method":["Prepare a smooth, thin batter without overworking the flour.","Mature the batter under refrigeration.","Prepare molds and bake with an initial high-heat phase to establish the dark shell, then finish at lower heat."],"notes":"Archive preserves mold, flour and caramelization experiments as versioned tests."},
-    {"id":"AY-CUL-004","title":"Tarte Bourdaloue — Ayala Variation","category":"Tarts & Pies","version":"v1.0","date":"Recovered","region":"Paris","photo":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Tarte%20aux%20poires%202a.jpg","summary":"Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.","ingredients":[{"text":"1 batch Pâte sucrée","link":"component-pate-sucree"},{"text":"Crème d’amande","link":"component-almond-cream"},{"text":"Poached pears","link":"tech-poach-pears"}],"method":["Line tart shell with pâte sucrée.","Fill with almond cream and arrange poached pears.","Bake until the almond cream is risen and golden and the pastry is crisp."],"notes":"Ayala variation connects classical Bourdaloue structure with citrus and spirit notes."}
+    {
+      "id":"AY-CUL-001",
+      "title":"Peach–Grand Marnier Flan Pâtissier",
+      "category":"French Pastry · Flan",
+      "version":"v1.1",
+      "date":"Aug 2026",
+      "region":"Paris / Île-de-France",
+      "photo":"flan.jpg",
+      "summary":"Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.",
+      "components":["component-pate-sucree","component-flan-base","component-peaches"],
+      "techniques":["tech-tempering","tech-stovetop-thickening","tech-caramelize-fruit","tech-freeze-shell"],
+      "method":[
+        "Line the tart ring with Pâte Sucrée and freeze until very firm.",
+        "Prepare the vanilla flan base: temper the yolks, return the mixture to the stove, and cook until thick and smooth.",
+        "Cool the caramelized Grand Marnier peaches before assembly.",
+        "Layer flan base, peaches, remaining flan base, then a final layer of peaches.",
+        "Bake until set with a slight movement at the center and a deeply caramelized surface; cool fully, then chill before slicing."
+      ],
+      "notes":"Tested version: two layers of peaches; no cream; one additional small yolk was used because the yolks were small."
+    },
+    {
+      "id":"AY-CUL-002",
+      "title":"Grand Marnier Madeleines",
+      "category":"French Classics",
+      "version":"v2.0",
+      "date":"Aug 2026",
+      "region":"Commercy · Lorraine",
+      "photo":"madeleines.jpg",
+      "summary":"Browned-butter madeleines developed around Grand Marnier, orange, honey and overnight maturation.",
+      "components":["component-madeleine-batter"],
+      "techniques":["tech-brown-butter","tech-madeleine-maturation","tech-madeleine-hump"],
+      "method":[
+        "Brown the butter and cool it until fluid but not hot.",
+        "Make the batter, fold in the cooled brown butter, orange zest, honey and Grand Marnier.",
+        "Cover and mature overnight in the refrigerator.",
+        "Bake cold batter in prepared madeleine molds until the hump rises and the edges are deeply golden."
+      ],
+      "notes":"Developed as a two-dozen batch; overnight maturation is preferred for flavor and structure."
+    },
+    {
+      "id":"AY-CUL-003",
+      "title":"Canelés de Bordeaux",
+      "category":"French Classics",
+      "version":"v1.x",
+      "date":"Aug 2026",
+      "region":"Bordeaux · Nouvelle-Aquitaine",
+      "photo":"canele.jpg",
+      "summary":"Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.",
+      "components":["component-canele-batter"],
+      "techniques":["tech-canele-flour","tech-canele-maturation","tech-canele-bake","tech-canele-molds"],
+      "method":[
+        "Prepare a smooth, thin batter without overworking the flour.",
+        "Mature the batter under refrigeration before baking.",
+        "Prepare the molds, fill with chilled batter, and begin with high heat to establish the dark shell.",
+        "Reduce the oven temperature to cook the custardy interior while preserving a mahogany crust."
+      ],
+      "notes":"Archive preserves mold, flour, maturation and caramelization experiments as versioned tests."
+    },
+    {
+      "id":"AY-CUL-004",
+      "title":"Tarte Bourdaloue — Ayala Variation",
+      "category":"Tarts & Pies",
+      "version":"v1.0",
+      "date":"Recovered",
+      "region":"Paris · Île-de-France",
+      "photo":"bourdaloue.jpg",
+      "summary":"Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.",
+      "components":["component-pate-sucree","component-almond-cream","component-poached-pears"],
+      "techniques":["tech-poach-pears","tech-almond-cream","tech-tart-assembly"],
+      "method":[
+        "Line the tart shell with Pâte Sucrée and chill until firm.",
+        "Fill with almond cream and arrange the poached pear halves or fans.",
+        "Bake until the almond cream is risen and golden and the pastry is crisp.",
+        "Cool before finishing with a light glaze or sliced almonds, if desired."
+      ],
+      "notes":"Ayala variation connects the classical Bourdaloue structure with citrus and spirit notes."
+    }
+  ],
+  "components": [
+    {
+      "id":"component-pate-sucree",
+      "title":"Pâte Sucrée",
+      "type":"Master pastry component",
+      "yield":"1 × 23–25 cm tart shell",
+      "ingredients":["125 g unsalted butter, soft","80 g confectioners’ sugar","25 g almond flour","1 g fine salt","50 g whole egg","250 g pastry flour or low-protein flour"],
+      "steps":["Cream butter, sugar, almond flour and salt just until homogeneous; avoid aerating excessively.","Add egg gradually and mix until emulsified.","Add flour and mix only until the dough comes together.","Flatten, wrap and chill at least 2 hours; overnight is excellent.","Roll 2.5–3 mm thick, line the tart ring, dock as needed and freeze before baking or filling."],
+      "notes":"Master working formula. Freezing the lined shell improves edge definition and helps resist slumping."
+    },
+    {
+      "id":"component-flan-base",
+      "title":"Vanilla Flan Pâtissier Base — No Cream",
+      "type":"Custard component",
+      "yield":"About 1 medium tart",
+      "ingredients":["500 g whole milk","1 vanilla bean or 2 tsp vanilla paste","4 large egg yolks (add 1 extra if yolks are small)","100 g sugar","35 g cornstarch","20 g all-purpose flour","Pinch fine salt"],
+      "steps":["Heat milk with vanilla until steaming; steep briefly.","Whisk yolks with sugar, then whisk in cornstarch, flour and salt.","Temper with hot milk in stages while whisking.","Return to medium heat and cook, whisking continuously, until thick and bubbling; continue 45–60 seconds to cook the starches.","Use warm for assembly or cool with plastic directly on the surface."],
+      "notes":"This archive version intentionally contains no cream, matching the tested Peach–Grand Marnier flan."
+    },
+    {
+      "id":"component-peaches",
+      "title":"Caramelized Grand Marnier Peaches",
+      "type":"Fruit component",
+      "yield":"Enough for two layers in one tart",
+      "ingredients":["450–500 g sliced peaches","30 g unsalted butter","45 g sugar","Finely grated zest of 1 orange","30 g Grand Marnier","Pinch of salt"],
+      "steps":["Melt butter and sugar in a wide pan until the sugar begins to dissolve.","Add peaches, orange zest and salt; cook until glossy and lightly caramelized without turning the fruit to puree.","Remove from direct heat before adding Grand Marnier, then return briefly to reduce excess liquid if needed.","Spread on a tray and cool completely before layering into custard."],
+      "notes":"Cool fruit before assembly so the custard structure is not loosened by residual heat."
+    },
+    {
+      "id":"component-madeleine-batter",
+      "title":"Grand Marnier Madeleine Batter",
+      "type":"Cake batter component",
+      "yield":"About 24 madeleines",
+      "ingredients":["4 large eggs","200 g sugar","20 g honey","240 g flour","8 g baking powder","200 g unsalted butter, browned","Zest of 1 orange","30–40 g Grand Marnier","2 g fine salt"],
+      "steps":["Whisk eggs, sugar and honey until smooth but not maximally aerated.","Fold in sifted flour, baking powder and salt.","Fold in orange zest and Grand Marnier, then stream in cooled brown butter.","Cover directly and refrigerate overnight.","Bake cold batter in buttered molds at a hot initial temperature, lowering slightly once the hump sets if needed."],
+      "notes":"Working Atelier formula for a two-dozen batch; the overnight rest is part of the formula, not an optional afterthought."
+    },
+    {
+      "id":"component-canele-batter",
+      "title":"Canelé Batter — Atelier Working Formula",
+      "type":"Custard batter component",
+      "yield":"About 12 standard canelés",
+      "ingredients":["500 g whole milk","50 g unsalted butter","1 vanilla bean","100 g flour (11–12% protein works; 00 can also be tested)","200 g sugar","2 whole eggs","2 egg yolks","40–50 g dark rum or Grand Marnier","2 g fine salt"],
+      "steps":["Heat milk, butter and vanilla until steaming; cool slightly.","Combine flour, sugar and salt; whisk in eggs and yolks without incorporating excessive air.","Gradually whisk in the warm milk mixture, then add the spirit.","Strain, cover and mature 24–48 hours in the refrigerator.","Stir gently before filling prepared molds; do not whip air into the batter."],
+      "notes":"The archive keeps flour choice, spirit, mold coating and bake profile as experimental variables."
+    },
+    {
+      "id":"component-almond-cream",
+      "title":"Crème d’Amande",
+      "type":"Almond cream component",
+      "yield":"Enough for one 23–25 cm tart",
+      "ingredients":["100 g unsalted butter, soft","100 g sugar","100 g almond flour","100 g whole egg","10 g flour","Vanilla","Optional: orange zest and 10–15 g Grand Marnier"],
+      "steps":["Cream butter and sugar until smooth, not excessively aerated.","Mix in almond flour, then egg gradually.","Add flour and aromatics; chill until spreadable.","Spread in the chilled tart shell before arranging pears."],
+      "notes":"Classic equal-parts structure with a small amount of flour for stability."
+    },
+    {
+      "id":"component-poached-pears",
+      "title":"Citrus-Spirit Poached Pears",
+      "type":"Fruit component",
+      "yield":"3–4 pears",
+      "ingredients":["3–4 firm pears","750 g water","180 g sugar","1 vanilla bean","Peel of 1 Seville or regular orange","30 g Grand Marnier","15–30 g dark rum"],
+      "steps":["Bring water, sugar, vanilla and orange peel to a gentle simmer.","Add peeled pears and poach below a hard boil until a knife enters with slight resistance.","Cool pears in the syrup for even flavor penetration.","Drain thoroughly before placing over almond cream; add spirits to the cooled or warm syrup according to desired intensity."],
+      "notes":"Dry the pears well before assembly so excess syrup does not dilute the almond cream."
+    }
+  ],
+  "techniques": [
+    {"id":"tech-tempering","title":"Tempering Yolks","family":"Custards","summary":"Raise yolk temperature gradually with hot liquid so proteins disperse rather than scramble.","steps":["Whisk yolks and dry ingredients first.","Add a small stream of hot milk while whisking constantly.","Continue in 2–3 additions until the yolk mixture is warm, then return everything to the saucepan."]},
+    {"id":"tech-stovetop-thickening","title":"Cooking Pastry Custard on the Stove","family":"Custards","summary":"Starch-thickened custard must reach a brief bubble to fully gelatinize and lose raw starch flavor.","steps":["Use medium heat and whisk into the corners of the pan.","Once thick, continue until bubbles break the surface.","Cook 45–60 seconds more, then remove from heat."]},
+    {"id":"tech-caramelize-fruit","title":"Caramelizing Fruit","family":"Fruit","summary":"Concentrate fruit flavor while controlling free moisture before it enters a pastry.","steps":["Use a wide pan so fruit sears rather than steams.","Add sugar sparingly; let fruit release moisture and reduce.","Cool completely before layering into creams or custards."]},
+    {"id":"tech-freeze-shell","title":"Freeze the Lined Tart Shell","family":"Tart shells","summary":"Freezing firms the butter and dough structure, improving edge definition and reducing slump.","steps":["Line the ring cleanly with even thickness.","Freeze until solid, ideally 30–60 minutes or longer.","Bake/fill directly from frozen unless the formula specifies otherwise."]},
+    {"id":"tech-brown-butter","title":"Beurre Noisette / Brown Butter","family":"Flavor","summary":"Cook milk solids until hazelnut-brown for a nutty aroma without burning.","steps":["Melt butter over medium heat.","Continue after foaming subsides, swirling frequently.","Remove when milk solids are amber-brown and aroma is nutty; cool before adding to batter."]},
+    {"id":"tech-madeleine-maturation","title":"Madeleine Batter Maturation","family":"Cake structure","summary":"A cold rest hydrates flour, deepens flavor and improves the temperature contrast used for the hump.","steps":["Cover batter directly to prevent a skin.","Refrigerate 8–24 hours.","Bake the batter cold in prepared molds."]},
+    {"id":"tech-madeleine-hump","title":"Building the Madeleine Hump","family":"Cake structure","summary":"Cold batter entering a hot oven creates the dramatic center rise associated with madeleines.","steps":["Chill batter thoroughly.","Use properly prepared metal molds.","Begin hot; avoid opening the oven during the early rise."]},
+    {"id":"tech-canele-flour","title":"Canelé Flour Choice","family":"Canelé experiments","summary":"Flour protein changes batter viscosity and interior structure; keep it as a controlled test variable.","steps":["Record flour brand and protein percentage.","Keep all other variables constant when comparing flours.","Score crust, custardy interior and tunneling after cooling."]},
+    {"id":"tech-canele-maturation","title":"Canelé Batter Maturation","family":"Canelé experiments","summary":"A long cold rest hydrates flour and settles air before the aggressive bake.","steps":["Strain batter before resting.","Refrigerate 24–48 hours.","Stir gently before filling; do not re-aerate."]},
+    {"id":"tech-canele-bake","title":"Canelé High-Heat Start","family":"Canelé experiments","summary":"A high initial temperature rapidly sets and caramelizes the outer shell before a lower finishing phase cooks the center.","steps":["Preheat molds and oven thoroughly if using that test protocol.","Start hot to establish the shell.","Lower heat to finish without burning the exterior."]},
+    {"id":"tech-canele-molds","title":"Preparing Canelé Molds","family":"Canelé experiments","summary":"Copper, aluminum and silicone transfer heat differently; coatings also affect release and crust.","steps":["Record mold material.","Apply the chosen butter/beeswax or butter-only coating thinly and evenly.","Chill molds before filling if that is part of the test protocol."]},
+    {"id":"tech-poach-pears","title":"Poaching Pears for Tarts","family":"Fruit","summary":"Gentle poaching softens pears evenly while preserving enough structure for slicing and baking.","steps":["Keep syrup below a hard boil.","Turn pears as needed for even cooking.","Cool in syrup, then drain thoroughly before tart assembly."]},
+    {"id":"tech-almond-cream","title":"Crème d’Amande Mixing","family":"Tart fillings","summary":"Mix for smoothness rather than maximum aeration to reduce excessive doming and oil separation.","steps":["Use soft butter, not melted butter.","Add egg gradually to maintain emulsion.","Chill before spreading into pastry."]},
+    {"id":"tech-tart-assembly","title":"Layered Tart Assembly","family":"Tarts","summary":"Build from a cold, stable shell and control moisture in every filling and fruit layer.","steps":["Keep shell chilled or frozen.","Use fillings at the intended viscosity and temperature.","Drain fruit thoroughly and leave clean margins for expansion."]}
+  ],
+  "places": [
+    {"id":"place-bordeaux","name":"Bordeaux","region":"Nouvelle-Aquitaine","x":31,"y":72,"recipe":"AY-CUL-003","image":"canele.jpg","label":"Canelés de Bordeaux"},
+    {"id":"place-lorraine","name":"Commercy / Lorraine","region":"Grand Est","x":72,"y":31,"recipe":"AY-CUL-002","image":"madeleines.jpg","label":"Madeleines"},
+    {"id":"place-paris","name":"Paris","region":"Île-de-France","x":53,"y":38,"recipe":"AY-CUL-001","image":"flan.jpg","label":"Flan pâtissier"},
+    {"id":"place-bourdaloue","name":"Paris · Rue Bourdaloue","region":"Île-de-France","x":57,"y":43,"recipe":"AY-CUL-004","image":"bourdaloue.jpg","label":"Tarte Bourdaloue"}
   ]
 }
