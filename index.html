@@ -1,45 +1,237 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atelier Ayala</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6f1028">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Atelier Ayala — The Culinary Archive</title>
 <style>
-:root{--bg:#f4eee5;--paper:#fffaf3;--ink:#27211d;--muted:#776c62;--wine:#702b3d;--line:#d8c9b7;--gold:#ad7d43}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,serif}header{padding:36px 6vw 22px;background:var(--paper);border-bottom:1px solid var(--line)}h1{font-size:clamp(38px,7vw,70px);margin:4px 0}.eyebrow,b,i,.nav button{font-family:Arial,sans-serif}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.nav button{border:1px solid var(--line);background:white;padding:10px 14px;border-radius:18px;cursor:pointer}.nav button.active{background:var(--wine);color:white}main{padding:28px 6vw 70px}.view.hidden,.hidden{display:none!important}.toolbar{display:flex;gap:10px;margin-bottom:18px}input[type=search]{width:min(480px,100%);padding:12px;border:1px solid var(--line);border-radius:18px;background:white}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.recipe{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}.tile{all:unset;display:block;cursor:pointer;width:100%}.pic{height:170px;background:linear-gradient(145deg,#d7b88e,#8d5665);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:15px}.pic span{font-size:54px}.pic small{font:12px Arial,sans-serif;margin-top:8px}.pad{padding:18px}.pad b{font-size:11px;color:var(--wine)}.pad h3{font-size:22px;margin:6px 0}.pad p{line-height:1.4}.pad i{font-size:12px;color:var(--muted)}.drawer{display:none;border-top:1px solid var(--line);padding:18px}.recipe.open .drawer{display:block}.tabs{display:flex;gap:6px;flex-wrap:wrap}.tabs button{border:1px solid var(--line);background:white;border-radius:15px;padding:8px 11px;cursor:pointer}.pane{padding-top:12px;line-height:1.5}textarea{display:block;width:100%;min-height:100px;margin-top:8px}.drop{display:block;border:2px dashed var(--line);padding:22px;text-align:center;border-radius:15px;cursor:pointer}.drop input{display:block;margin:10px auto 0;max-width:100%}.media-item{margin-top:10px;padding:10px;border:1px solid var(--line);border-radius:12px;font-family:Arial,sans-serif;font-size:13px}.media-item img,.media-item video{max-width:100%;max-height:240px;display:block;margin-top:8px;border-radius:10px}.atlas{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.node{min-height:115px;text-align:left;border:1px solid var(--line);border-radius:18px;background:var(--paper);padding:18px;cursor:pointer}.node b{display:block;color:var(--wine);font-size:11px;margin-bottom:8px}.node span{font:18px Georgia,serif}.files{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}.files ul{line-height:1.8}.hint{color:var(--muted)}@media(max-width:500px){header,main{padding-left:18px;padding-right:18px}}
-</style></head><body><header><div class="eyebrow">Recipes · experiments · table notes</div><h1>Atelier Ayala</h1><p>The Culinary Archive — open every card, preserve every experiment, attach the media that tells its story.</p><div class="nav"><button class="active" data-view="recipes">Recipes</button><button data-view="atlas">Map / Atlas</button><button data-view="media">Media Drop</button><button data-view="files">Files</button></div></header>
-<main>
-<section id="recipes" class="view"><div class="toolbar"><input id="search" type="search" placeholder="Search recipes or IDs…"></div><div class="grid"><article class="recipe" data-id="AY-CUL-001" data-name="peach–grand marnier flan pâtissier">
-<button class="tile" type="button"><div class="pic"><span>🍑</span><small>Drop your photo in Media, then assign it here</small></div><div class="pad"><b>AY-CUL-001</b><h3>Peach–Grand Marnier Flan Pâtissier</h3><p>Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.</p><i>Tested · v1.0</i></div></button>
-<div class="drawer"><div class="tabs"><button type="button" data-tab="recipe">Recipe</button><button type="button" data-tab="notes">Lab notes</button><button type="button" data-tab="media">Media</button></div>
-<div class="pane recipepane"><h4>Ingredients</h4><ul><li>Pâte sucrée shell</li><li>4 egg yolks</li><li>500 ml whole milk (or 400 ml milk + 100 ml cream)</li><li>90–100 g sugar</li><li>35 g cornstarch</li><li>15 g flour</li><li>1 vanilla bean</li><li>2–3 peaches</li><li>Butter + sugar</li><li>1½–2 Tbsp Grand Marnier</li><li>Orange zest</li></ul><h4>Method</h4><ol><li>Partially blind-bake the pâte sucrée.</li><li>Caramelize peaches with butter, sugar, orange zest and Grand Marnier.</li><li>Temper yolks and cook the vanilla custard on the stove until very thick.</li><li>Layer custard → peaches → custard → remaining peaches.</li><li>Bake at 190°C / 375°F for about 40–50 minutes.</li><li>Cool completely; refrigerate overnight.</li></ol></div>
-<div class="pane notespane hidden"><p>Signature first entry. Add whole-flan, cut-slice and process photographs.</p><label>Private working note<textarea placeholder="Type a kitchen observation…"></textarea></label></div>
-<div class="pane mediapane hidden"><p>Add photographs, short videos, audio notes, PDFs or recipe files below. They remain in this browser session unless you save them separately.</p><label class="drop">＋ Add / drop media<input class="fileinput" type="file" multiple accept="image/*,video/*,audio/*,.pdf,.txt,.doc,.docx"></label><div class="media-list"></div></div>
-</div></article><article class="recipe" data-id="AY-CUL-002" data-name="grand marnier madeleines">
-<button class="tile" type="button"><div class="pic"><span>🧈</span><small>Drop your photo in Media, then assign it here</small></div><div class="pad"><b>AY-CUL-002</b><h3>Grand Marnier Madeleines</h3><p>Browned-butter madeleines developed around Grand Marnier, orange, honey and overnight maturation.</p><i>Tested / evolving · v2.0</i></div></button>
-<div class="drawer"><div class="tabs"><button type="button" data-tab="recipe">Recipe</button><button type="button" data-tab="notes">Lab notes</button><button type="button" data-tab="media">Media</button></div>
-<div class="pane recipepane"><h4>Ingredients</h4><ul><li>2 eggs (v1 baseline)</li><li>100 g sugar (v1 baseline)</li><li>120 g flour (v1 baseline)</li><li>100 g browned butter (v1 baseline)</li><li>Grand Marnier</li><li>Honey (v2)</li><li>Vanilla</li><li>Orange zest</li><li>Salt</li></ul><h4>Method</h4><ol><li>Brown and cool the butter.</li><li>Build the batter gently without excessive aeration.</li><li>Flavor with vanilla, citrus and Grand Marnier; v2 incorporates honey.</li><li>Refrigerate overnight.</li><li>Bake cold batter in prepared madeleine molds until humped and deeply golden.</li></ol></div>
-<div class="pane notespane hidden"><p>Lineage: v1.0 12-piece formulation; v1.1 no-leavener experiment; v2.0 24-piece Grand Marnier–Honey overnight version.</p><label>Private working note<textarea placeholder="Type a kitchen observation…"></textarea></label></div>
-<div class="pane mediapane hidden"><p>Add photographs, short videos, audio notes, PDFs or recipe files below. They remain in this browser session unless you save them separately.</p><label class="drop">＋ Add / drop media<input class="fileinput" type="file" multiple accept="image/*,video/*,audio/*,.pdf,.txt,.doc,.docx"></label><div class="media-list"></div></div>
-</div></article><article class="recipe" data-id="AY-CUL-003" data-name="canelés de bordeaux">
-<button class="tile" type="button"><div class="pic"><span>🔥</span><small>Drop your photo in Media, then assign it here</small></div><div class="pad"><b>AY-CUL-003</b><h3>Canelés de Bordeaux</h3><p>Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.</p><i>Tested / evolving · v1.x</i></div></button>
-<div class="drawer"><div class="tabs"><button type="button" data-tab="recipe">Recipe</button><button type="button" data-tab="notes">Lab notes</button><button type="button" data-tab="media">Media</button></div>
-<div class="pane recipepane"><h4>Ingredients</h4><ul><li>480 g milk</li><li>28 g butter</li><li>1 vanilla bean</li><li>200 g sugar</li><li>95 g flour</li><li>1.5 g salt</li><li>100 g whole egg</li><li>35–40 g yolks</li><li>Optional branch: 50–60 g dark rum</li></ul><h4>Method</h4><ol><li>Prepare a smooth, low-aeration batter.</li><li>Rest refrigerated 24–48 hours.</li><li>Bake ~15 minutes at 245°C / 475°F.</li><li>Reduce to 190°C / 375°F and bake 45–60 minutes, judging by deep caramelization.</li></ol></div>
-<div class="pane notespane hidden"><p>Keep the imperfect batch in the experiment record: dramatic rise, overflow/collapse, pale shell, then corrective caramelization.</p><label>Private working note<textarea placeholder="Type a kitchen observation…"></textarea></label></div>
-<div class="pane mediapane hidden"><p>Add photographs, short videos, audio notes, PDFs or recipe files below. They remain in this browser session unless you save them separately.</p><label class="drop">＋ Add / drop media<input class="fileinput" type="file" multiple accept="image/*,video/*,audio/*,.pdf,.txt,.doc,.docx"></label><div class="media-list"></div></div>
-</div></article><article class="recipe" data-id="AY-CUL-004" data-name="tarte bourdaloue — ayala variation">
-<button class="tile" type="button"><div class="pic"><span>🍐</span><small>Drop your photo in Media, then assign it here</small></div><div class="pad"><b>AY-CUL-004</b><h3>Tarte Bourdaloue — Ayala Variation</h3><p>Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.</p><i>Recovered · v1.0</i></div></button>
-<div class="drawer"><div class="tabs"><button type="button" data-tab="recipe">Recipe</button><button type="button" data-tab="notes">Lab notes</button><button type="button" data-tab="media">Media</button></div>
-<div class="pane recipepane"><h4>Ingredients</h4><ul><li>Pâte sucrée: ~150 g flour, 113 g butter, 40 g powdered sugar, 1 yolk</li><li>Frangipane: 113 g butter, 100 g sugar, 100 g almond flour, 2 eggs</li><li>Pears</li><li>~3 cups water</li><li>½ cup sugar</li><li>Orange peel</li><li>½ vanilla bean</li><li>1 Tbsp Grand Marnier</li><li>1 Tbsp dark rum</li></ul><h4>Method</h4><ol><li>Prepare and chill pâte sucrée.</li><li>Poach pears gently with vanilla, orange and liqueurs; drain well.</li><li>Prepare frangipane.</li><li>Fill shell and arrange pears.</li><li>Bake until almond filling is set and deeply golden.</li></ol></div>
-<div class="pane notespane hidden"><p>Preserve the Ayala poaching variation rather than normalizing it to a generic Bourdaloue.</p><label>Private working note<textarea placeholder="Type a kitchen observation…"></textarea></label></div>
-<div class="pane mediapane hidden"><p>Add photographs, short videos, audio notes, PDFs or recipe files below. They remain in this browser session unless you save them separately.</p><label class="drop">＋ Add / drop media<input class="fileinput" type="file" multiple accept="image/*,video/*,audio/*,.pdf,.txt,.doc,.docx"></label><div class="media-list"></div></div>
-</div></article></div></section>
-<section id="atlas" class="view hidden"><div class="eyebrow">Culinary map</div><h2>Archive Atlas</h2><p class="hint">Click a recovered recipe to jump directly into it. The lighter records are our recovery queue.</p><div class="atlas"><button class="node jump" data-jump="AY-CUL-001"><b>AY-CUL-001</b><span>Peach–Grand Marnier Flan Pâtissier</span></button><button class="node jump" data-jump="AY-CUL-002"><b>AY-CUL-002</b><span>Grand Marnier Madeleines</span></button><button class="node jump" data-jump="AY-CUL-003"><b>AY-CUL-003</b><span>Canelés de Bordeaux</span></button><button class="node jump" data-jump="AY-CUL-004"><b>AY-CUL-004</b><span>Tarte Bourdaloue — Ayala Variation</span></button><button type="button" class="node"><b>AY-CUL-005</b><span>Cranberry–Cherry Clafoutis</span></button><button type="button" class="node"><b>AY-CUL-006</b><span>Red-Wine Cherry &amp; Orange Clafoutis</span></button><button type="button" class="node"><b>AY-CUL-007</b><span>Chocolate–Framboise Tart</span></button><button type="button" class="node"><b>AY-CUL-008</b><span>Grand Marnier Sourdough Bread Pudding</span></button><button type="button" class="node"><b>AY-CUL-009</b><span>Smoky Baba Ganoush</span></button><button type="button" class="node"><b>AY-CUL-010</b><span>Experimental Hummus Collection</span></button><button type="button" class="node"><b>AY-CUL-F01</b><span>Pâte Sucrée</span></button><button type="button" class="node"><b>AY-CUL-F02</b><span>Browned Butter</span></button><button type="button" class="node"><b>AY-CUL-F03</b><span>Grand Marnier Caramelized Fruit</span></button><button type="button" class="node"><b>AY-CUL-F04</b><span>Vanilla Pastry Custard</span></button></div></section>
-<section id="media" class="view hidden"><div class="files"><div class="eyebrow">Media intake</div><h2>Add photographs, recordings & files</h2><p>Drop media here for previewing and sorting during this session. For permanent inclusion in the downloadable archive, put the files in the included <b>media</b> folder and we can wire each one to its recipe.</p><label class="drop">＋ Choose media<input id="globalfiles" type="file" multiple accept="image/*,video/*,audio/*,.pdf,.txt,.doc,.docx"></label><div id="global-list"></div></div></section>
-<section id="files" class="view hidden"><div class="files"><div class="eyebrow">Repository</div><h2>Files</h2><ul><li><b>index.html</b> — this complete clickable archive</li><li><b>recipes.json</b> — machine-readable master register</li><li><b>media/</b> — photographs, video, audio and supporting recipe files</li><li><b>README.txt</b> — archive instructions</li></ul><p class="hint">Version 0.2 is deliberately self-contained: recipes are embedded in the page, so opening index.html directly works without a local server.</p></div></section>
-</main>
+:root{--paper:#f8f2e8;--paper2:#fffaf2;--ink:#2b1916;--wine:#6f1028;--wine2:#8d263d;--gold:#b98a3e;--gold2:#dec58e;--muted:#7f6d62;--line:#e7d8c0;--shadow:0 10px 30px rgba(62,35,24,.10)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:
+radial-gradient(circle at 10% 0%,rgba(185,138,62,.08),transparent 28rem),
+linear-gradient(180deg,var(--paper2),var(--paper));color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+button,input{font:inherit} button{cursor:pointer}
+.app{max-width:1180px;margin:auto;min-height:100vh;padding-bottom:90px}
+header{position:sticky;top:0;z-index:30;background:rgba(255,250,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brandbar{display:grid;grid-template-columns:48px 1fr 48px;align-items:center;padding:12px 18px}
+.monogram{width:42px;height:42px;border-radius:14px;background:var(--wine);color:#f5dca7;display:grid;place-items:center;font-size:25px;border:1px solid #c69f5a;box-shadow:var(--shadow)}
+.brand{text-align:center;letter-spacing:.08em;color:var(--wine);font-weight:700;font-size:clamp(22px,4.2vw,34px)}
+.brand small{display:block;font-weight:400;font-style:italic;letter-spacing:.04em;color:#9b6f28;font-size:13px;margin-top:2px}
+.iconbtn{border:0;background:transparent;color:var(--wine);font-size:25px}
+.hero{padding:46px 22px 26px;text-align:center;max-width:850px;margin:auto}
+.kicker{letter-spacing:.28em;font-size:11px;color:var(--wine);text-transform:uppercase}
+.hero h1{font-size:clamp(45px,8vw,82px);margin:10px 0 8px;color:#4b0c1c;line-height:.95}
+.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.6}
+.flourish{color:var(--gold);font-size:25px;margin:14px 0}
+.navtabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 18px 18px;padding:8px;background:#fffaf5;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.navtabs button{border:0;background:transparent;padding:12px 7px;border-radius:14px;color:#5e4037;font-size:13px}
+.navtabs button.active{background:#f1e3d2;color:var(--wine);box-shadow:inset 0 -2px var(--wine)}
+.controls{display:flex;gap:10px;padding:0 18px 22px;max-width:900px;margin:auto}
+.search{flex:1;border:1px solid var(--line);background:#fffdf9;border-radius:999px;padding:13px 18px;color:var(--ink);box-shadow:0 4px 14px rgba(62,35,24,.05)}
+.primary{border:0;background:linear-gradient(135deg,var(--wine),var(--wine2));color:#fff7ec;border-radius:999px;padding:12px 18px;box-shadow:var(--shadow);white-space:nowrap}
+.section{padding:0 18px 28px}
+.sectionhead{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto 14px}
+.sectionhead h2{color:var(--wine);font-size:20px;letter-spacing:.04em;margin:0}
+.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:#fffaf3;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.2s transform,.2s box-shadow}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(62,35,24,.14)}
+.photo{height:210px;background:
+radial-gradient(circle at 30% 30%,rgba(255,255,255,.25),transparent 25%),
+linear-gradient(135deg,#b98263,#7a3242);display:grid;place-items:center;font-size:74px;position:relative}
+.photo:after{content:'Add your photograph';position:absolute;bottom:12px;right:14px;background:rgba(44,21,19,.62);color:white;padding:6px 10px;border-radius:999px;font-size:11px;letter-spacing:.04em}
+.cardbody{padding:18px}
+.id{font-size:10px;letter-spacing:.13em;color:#9e7c63}
+.card h3{font-size:24px;color:var(--wine);margin:6px 0 5px;line-height:1.08}
+.category{color:#9b6f28;font-size:14px;margin-bottom:10px}
+.summary{color:#634f46;line-height:1.5;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.badge{border:1px solid #e0cfae;background:#fffdf8;border-radius:999px;padding:5px 9px;color:#725c4f;font-size:11px}
+.openbtn{margin-top:15px;width:100%;border:1px solid #d8bd8b;background:#fff8ec;color:var(--wine);border-radius:12px;padding:10px;font-weight:700}
+.panel{display:none;max-width:1100px;margin:auto;padding:0 18px 35px} .panel.active{display:block}
+.empty{background:#fffaf3;border:1px dashed #cdb995;border-radius:22px;padding:32px;text-align:center;color:#7e695c}
+.dialog{position:fixed;inset:0;z-index:100;background:rgba(39,19,18,.48);display:none;align-items:flex-end;justify-content:center;padding:0}
+.dialog.open{display:flex}
+.sheet{width:min(820px,100%);max-height:92dvh;overflow:auto;background:#fffaf3;border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.2);border:1px solid #eadac2}
+.sheethero{height:250px;background:linear-gradient(135deg,#ab6a4d,#6f1028);display:grid;place-items:center;font-size:100px;position:relative}
+.close{position:absolute;top:16px;right:16px;background:#fffaf3;border:0;border-radius:999px;width:42px;height:42px;font-size:22px;color:var(--wine)}
+.sheetbody{padding:24px}
+.sheetbody h2{font-size:34px;color:var(--wine);margin:0 0 4px} .sheetbody .category{font-size:16px}
+.detailtabs{display:flex;gap:8px;overflow:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:20px 0}
+.detailtabs button{border:0;background:transparent;color:#765d4f;padding:8px 10px} .detailtabs .active{color:var(--wine);border-bottom:2px solid var(--wine)}
+.detailview{line-height:1.65} .detailview ul,.detailview ol{padding-left:22px}
+.media-drop{border:2px dashed #c9aa72;border-radius:18px;padding:22px;text-align:center;background:#fffdf7}
+.media-drop input{display:block;margin:14px auto}
+.preview{max-width:100%;max-height:320px;border-radius:16px;margin-top:14px}
+.bottomnav{display:none}
+@media(max-width:700px){
+  .app{padding-bottom:86px} .hero{padding-top:28px} .hero p{font-size:16px}
+  .navtabs{display:none} .controls{padding-top:8px} .primary{font-size:0;width:48px;height:48px;padding:0} .primary:after{content:'+';font-size:26px}
+  .grid{grid-template-columns:1fr} .photo{height:225px} .card h3{font-size:26px}
+  .bottomnav{position:fixed;z-index:40;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,250,242,.96);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:7px 8px max(7px,env(safe-area-inset-bottom))}
+  .bottomnav button{border:0;background:transparent;color:#71584d;padding:7px 3px;font-size:11px} .bottomnav button.active{color:var(--wine);font-weight:700}
+  .sheethero{height:220px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brandbar">
+    <div class="monogram">A</div>
+    <div class="brand">ATELIER AYALA<small>The Culinary Archive</small></div>
+    <button class="iconbtn" id="searchJump" aria-label="Search">⌕</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="kicker">Recipes · Experiments · Table Notes</div>
+  <h1>Atelier Ayala</h1>
+  <div class="flourish">❦</div>
+  <p>Open every card. Preserve every experiment. Attach the media that tells its story.</p>
+</section>
+
+<div class="navtabs">
+  <button class="active" data-panel="recipes">▣<br>Recipes</button>
+  <button data-panel="atlas">◈<br>Atlas</button>
+  <button data-panel="media">▧<br>Media</button>
+  <button data-panel="files">□<br>Files</button>
+</div>
+
+<div class="controls">
+  <input id="search" class="search" placeholder="Search recipes or IDs…">
+  <button class="primary" id="newRecipe">+ New recipe</button>
+</div>
+
+<section id="recipes" class="panel active">
+  <div class="sectionhead"><h2>❦ Recipe Archive</h2><span id="count"></span></div>
+  <div id="grid" class="grid"></div>
+</section>
+
+<section id="atlas" class="panel">
+  <div class="sectionhead"><h2>Atlas</h2></div>
+  <div class="empty"><strong>Technique Atlas</strong><br><br>French Classics → Madeleines · Canelés<br>Flan & Custards → Peach–Grand Marnier Flan Pâtissier<br>Tarts & Pies → Tarte Bourdaloue<br><br>This view is ready to grow into a clickable technique and ingredient map.</div>
+</section>
+
+<section id="media" class="panel">
+  <div class="sectionhead"><h2>Media Drop</h2></div>
+  <div class="media-drop">
+    <strong>Add a photograph to this browser session</strong>
+    <p>Choose a photo from your phone or computer. The preview stays on this device; later we can wire permanent media storage into the archive.</p>
+    <input id="mediaInput" type="file" accept="image/*,video/*,audio/*">
+    <div id="mediaPreview"></div>
+  </div>
+</section>
+
+<section id="files" class="panel">
+  <div class="sectionhead"><h2>Archive Files</h2></div>
+  <div class="empty">Core archive files<br><br><strong>index.html</strong><br><strong>recipes.json</strong><br><strong>manifest.webmanifest</strong><br><strong>sw.js</strong><br><strong>icon-192.png / icon-512.png</strong></div>
+</section>
+</div>
+
+<nav class="bottomnav">
+  <button class="active" data-panel="recipes">▣<br>Recipes</button>
+  <button data-panel="atlas">◈<br>Atlas</button>
+  <button data-panel="media">▧<br>Media</button>
+  <button data-panel="files">□<br>Files</button>
+</nav>
+
+<div id="dialog" class="dialog" role="dialog" aria-modal="true">
+  <article class="sheet">
+    <div id="sheetHero" class="sheethero"><button class="close" id="close">×</button><span id="heroEmoji"></span></div>
+    <div class="sheetbody">
+      <div id="recipeId" class="id"></div>
+      <h2 id="recipeTitle"></h2>
+      <div id="recipeCategory" class="category"></div>
+      <div id="recipeMeta" class="meta"></div>
+      <p id="recipeSummary"></p>
+      <div class="detailtabs">
+        <button class="active" data-detail="overview">Overview</button>
+        <button data-detail="ingredients">Ingredients</button>
+        <button data-detail="method">Method</button>
+        <button data-detail="notes">Notes</button>
+        <button data-detail="media">Media</button>
+      </div>
+      <div id="detailView" class="detailview"></div>
+    </div>
+  </article>
+</div>
+
 <script>
-const views=[...document.querySelectorAll('.view')], nav=[...document.querySelectorAll('.nav button')];
-function show(id){views.forEach(v=>v.classList.toggle('hidden',v.id!==id));nav.forEach(b=>b.classList.toggle('active',b.dataset.view===id));}
-nav.forEach(b=>b.addEventListener('click',()=>show(b.dataset.view)));
-document.querySelectorAll('.recipe').forEach(r=>{r.querySelector('.tile').addEventListener('click',()=>r.classList.toggle('open'));r.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{r.querySelectorAll('.pane').forEach(p=>p.classList.add('hidden'));r.querySelector('.'+b.dataset.tab+'pane').classList.remove('hidden');}));});
-document.querySelectorAll('.jump').forEach(b=>b.addEventListener('click',()=>{show('recipes');const r=document.querySelector(`[data-id="${b.dataset.jump}"]`);r.classList.add('open');r.scrollIntoView({behavior:'smooth'});}));
-document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('.recipe').forEach(r=>r.classList.toggle('hidden',!(r.dataset.id.toLowerCase()+' '+r.dataset.name).includes(q)));});
-function preview(input,target){[...input.files].forEach(f=>{const d=document.createElement('div');d.className='media-item';d.textContent=f.name+' · '+Math.round(f.size/1024)+' KB';if(f.type.startsWith('image/')){const im=document.createElement('img');im.src=URL.createObjectURL(f);d.appendChild(im)}else if(f.type.startsWith('video/')){const v=document.createElement('video');v.controls=true;v.src=URL.createObjectURL(f);d.appendChild(v)}else if(f.type.startsWith('audio/')){const a=document.createElement('audio');a.controls=true;a.src=URL.createObjectURL(f);d.appendChild(a)}target.appendChild(d);})}
-document.querySelectorAll('.fileinput').forEach(i=>i.addEventListener('change',()=>preview(i,i.closest('.mediapane').querySelector('.media-list'))));
-document.getElementById('globalfiles').addEventListener('change',e=>preview(e.target,document.getElementById('global-list')));
-</script></body></html>
+const recipes=[{"id": "AY-CUL-001", "title": "Peach–Grand Marnier Flan Pâtissier", "category": "French Pastry · Flan", "version": "v1.1", "date": "Aug 2026", "status": "Tested", "summary": "Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.", "accent": "🍑", "ingredients": ["Pâte sucrée shell, frozen before filling", "6 small egg yolks (or 4 large yolks + 1 extra yolk)", "750 g whole milk", "150 g sugar", "45 g cornstarch", "25 g flour", "1 vanilla bean", "Peaches, sliced", "Butter, sugar, orange zest and Grand Marnier for caramelizing"], "method": ["Caramelize the peaches in butter, sugar, orange zest and Grand Marnier; cool completely.", "Heat milk with vanilla. Whisk yolks with sugar, cornstarch and flour.", "Temper the yolk mixture, return to the heat and cook until very thick.", "Layer custard and peaches in the frozen pâte sucrée shell; finish with peaches on top.", "Bake until deeply set and caramelized at the edges. Chill thoroughly before slicing."], "notes": "Two layers of peaches gave the finished flan a more dramatic fruit profile. The extra small yolk strengthened the custard."}, {"id": "AY-CUL-002", "title": "Grand Marnier Madeleines", "category": "French Classics", "version": "v2.0", "date": "Aug 2026", "status": "Tested / evolving", "summary": "Browned-butter madeleines built around Grand Marnier, orange, honey and overnight maturation.", "accent": "🧈", "ingredients": ["2 eggs", "100 g sugar", "120 g flour", "100 g browned butter", "Grand Marnier", "Honey", "Orange zest", "Pinch of salt"], "method": ["Brown the butter and cool until warm, not hot.", "Whisk eggs and sugar until smooth; fold in flour and salt.", "Add browned butter, Grand Marnier, honey and orange zest.", "Cover and refrigerate overnight.", "Bake cold batter in a well-prepared madeleine pan until domed and golden."], "notes": "An overnight rest improves hydration, aroma integration and the characteristic hump."}, {"id": "AY-CUL-003", "title": "Canelés de Bordeaux", "category": "French Classics", "version": "v1.x", "date": "Aug 2026", "status": "Tested / evolving", "summary": "Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.", "accent": "🔥", "ingredients": ["450 g milk", "25 g butter", "1 vanilla bean", "200 g sugar", "95 g flour", "2 eggs + 2 yolks", "Rum or Grand Marnier, optional"], "method": ["Infuse milk with vanilla and butter; cool slightly.", "Combine sugar and flour, then incorporate eggs and yolks without excessive aeration.", "Gradually add warm milk; add spirit if using.", "Rest batter at least overnight.", "Bake in prepared molds with an initial high-heat phase, then reduce heat until mahogany-dark and crisp."], "notes": "The archive tracks mold material, beeswax/butter treatment and the high-heat caramelization window."}, {"id": "AY-CUL-004", "title": "Tarte Bourdaloue — Ayala Variation", "category": "Tarts & Pies", "version": "v1.0", "date": "Aug 2026", "status": "Recovered", "summary": "Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.", "accent": "🍐", "ingredients": ["Pâte sucrée shell", "Almond cream", "Pears", "Vanilla", "Seville orange", "Grand Marnier", "Dark rum"], "method": ["Prepare and chill the pâte sucrée shell.", "Poach pears with vanilla, citrus and spirits; cool and drain.", "Fill shell with almond cream and arrange pears.", "Bake until the almond cream is deeply golden and the pears are glazed."], "notes": "Ayala variation: layered citrus and spirit aromatics added to the classic pear-and-frangipane structure."}];
+const grid=document.getElementById('grid'), search=document.getElementById('search'), count=document.getElementById('count');
+let current=null, currentDetail='overview';
+
+function render(list=recipes){
+  count.textContent=`${list.length} records`;
+  grid.innerHTML=list.map(r=>`
+    <article class="card" data-id="${r.id}">
+      <div class="photo">${r.accent}</div>
+      <div class="cardbody">
+        <div class="id">${r.id}</div>
+        <h3>${r.title}</h3>
+        <div class="category">${r.category}</div>
+        <div class="summary">${r.summary}</div>
+        <div class="meta"><span class="badge">${r.status}</span><span class="badge">${r.version}</span><span class="badge">${r.date}</span></div>
+        <button class="openbtn">Open archive card</button>
+      </div>
+    </article>`).join('');
+  grid.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>openRecipe(c.dataset.id)));
+}
+render();
+
+search.addEventListener('input',()=>{
+  const q=search.value.toLowerCase().trim();
+  render(recipes.filter(r=>JSON.stringify(r).toLowerCase().includes(q)));
+});
+document.getElementById('searchJump').onclick=()=>{search.scrollIntoView({behavior:'smooth',block:'center'});search.focus()};
+
+function switchPanel(id){
+ document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));
+ document.querySelectorAll('[data-panel]').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('[data-panel]').forEach(b=>b.addEventListener('click',()=>switchPanel(b.dataset.panel)));
+
+function openRecipe(id){
+ current=recipes.find(r=>r.id===id); currentDetail='overview';
+ document.getElementById('recipeId').textContent=current.id;
+ document.getElementById('recipeTitle').textContent=current.title;
+ document.getElementById('recipeCategory').textContent=current.category;
+ document.getElementById('heroEmoji').textContent=current.accent;
+ document.getElementById('recipeSummary').textContent=current.summary;
+ document.getElementById('recipeMeta').innerHTML=`<span class="badge">${current.status}</span><span class="badge">${current.version}</span><span class="badge">${current.date}</span>`;
+ document.querySelectorAll('[data-detail]').forEach(b=>b.classList.toggle('active',b.dataset.detail==='overview'));
+ showDetail();
+ document.getElementById('dialog').classList.add('open');
+ document.body.style.overflow='hidden';
+}
+function showDetail(){
+ let h='';
+ if(currentDetail==='overview') h=`<p>${current.summary}</p><p><strong>Status:</strong> ${current.status}<br><strong>Version:</strong> ${current.version}<br><strong>Date:</strong> ${current.date}</p>`;
+ if(currentDetail==='ingredients') h='<ul>'+current.ingredients.map(x=>`<li>${x}</li>`).join('')+'</ul>';
+ if(currentDetail==='method') h='<ol>'+current.method.map(x=>`<li>${x}</li>`).join('')+'</ol>';
+ if(currentDetail==='notes') h=`<p>${current.notes}</p>`;
+ if(currentDetail==='media') h=`<div class="media-drop"><strong>Media for ${current.title}</strong><p>Use the main Media tab to preview an image now. Permanent per-recipe media is the next archive upgrade.</p></div>`;
+ document.getElementById('detailView').innerHTML=h;
+}
+document.querySelectorAll('[data-detail]').forEach(b=>b.addEventListener('click',()=>{
+ currentDetail=b.dataset.detail; document.querySelectorAll('[data-detail]').forEach(x=>x.classList.toggle('active',x===b)); showDetail();
+}));
+document.getElementById('close').onclick=()=>{document.getElementById('dialog').classList.remove('open');document.body.style.overflow=''};
+document.getElementById('dialog').addEventListener('click',e=>{if(e.target.id==='dialog') document.getElementById('close').click()});
+document.getElementById('newRecipe').onclick=()=>alert('New Recipe editor is staged for the next build. This version protects the four recovered archive records.');
+
+document.getElementById('mediaInput').addEventListener('change',e=>{
+ const f=e.target.files[0]; if(!f)return;
+ const url=URL.createObjectURL(f), box=document.getElementById('mediaPreview');
+ if(f.type.startsWith('image/')) box.innerHTML=`<img class="preview" src="${url}" alt="Uploaded preview">`;
+ else if(f.type.startsWith('video/')) box.innerHTML=`<video class="preview" src="${url}" controls></video>`;
+ else if(f.type.startsWith('audio/')) box.innerHTML=`<audio src="${url}" controls></audio>`;
+});
+if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
+</script>
+</body>
+</html>

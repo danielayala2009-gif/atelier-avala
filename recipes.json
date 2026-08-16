@@ -1,162 +1,112 @@
-{
-  "archive": "Atelier Ayala",
-  "version": "0.2",
-  "recipes": [
-    {
-      "id": "AY-CUL-001",
-      "name": "Peach–Grand Marnier Flan Pâtissier",
-      "cat": "Pastry",
-      "status": "Tested",
-      "v": "1.0",
-      "emoji": "🍑",
-      "desc": "Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.",
-      "ingredients": [
-        "Pâte sucrée shell",
-        "4 egg yolks",
-        "500 ml whole milk (or 400 ml milk + 100 ml cream)",
-        "90–100 g sugar",
-        "35 g cornstarch",
-        "15 g flour",
-        "1 vanilla bean",
-        "2–3 peaches",
-        "Butter + sugar",
-        "1½–2 Tbsp Grand Marnier",
-        "Orange zest"
-      ],
-      "method": [
-        "Partially blind-bake the pâte sucrée.",
-        "Caramelize peaches with butter, sugar, orange zest and Grand Marnier.",
-        "Temper yolks and cook the vanilla custard on the stove until very thick.",
-        "Layer custard → peaches → custard → remaining peaches.",
-        "Bake at 190°C / 375°F for about 40–50 minutes.",
-        "Cool completely; refrigerate overnight."
-      ],
-      "notes": "Signature first entry. Add whole-flan, cut-slice and process photographs."
-    },
-    {
-      "id": "AY-CUL-002",
-      "name": "Grand Marnier Madeleines",
-      "cat": "Pastry",
-      "status": "Tested / evolving",
-      "v": "2.0",
-      "emoji": "🧈",
-      "desc": "Browned-butter madeleines developed around Grand Marnier, orange, honey and overnight maturation.",
-      "ingredients": [
-        "2 eggs (v1 baseline)",
-        "100 g sugar (v1 baseline)",
-        "120 g flour (v1 baseline)",
-        "100 g browned butter (v1 baseline)",
-        "Grand Marnier",
-        "Honey (v2)",
-        "Vanilla",
-        "Orange zest",
-        "Salt"
-      ],
-      "method": [
-        "Brown and cool the butter.",
-        "Build the batter gently without excessive aeration.",
-        "Flavor with vanilla, citrus and Grand Marnier; v2 incorporates honey.",
-        "Refrigerate overnight.",
-        "Bake cold batter in prepared madeleine molds until humped and deeply golden."
-      ],
-      "notes": "Lineage: v1.0 12-piece formulation; v1.1 no-leavener experiment; v2.0 24-piece Grand Marnier–Honey overnight version."
-    },
-    {
-      "id": "AY-CUL-003",
-      "name": "Canelés de Bordeaux",
-      "cat": "Pastry",
-      "status": "Tested / evolving",
-      "v": "1.x",
-      "emoji": "🔥",
-      "desc": "Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.",
-      "ingredients": [
-        "480 g milk",
-        "28 g butter",
-        "1 vanilla bean",
-        "200 g sugar",
-        "95 g flour",
-        "1.5 g salt",
-        "100 g whole egg",
-        "35–40 g yolks",
-        "Optional branch: 50–60 g dark rum"
-      ],
-      "method": [
-        "Prepare a smooth, low-aeration batter.",
-        "Rest refrigerated 24–48 hours.",
-        "Bake ~15 minutes at 245°C / 475°F.",
-        "Reduce to 190°C / 375°F and bake 45–60 minutes, judging by deep caramelization."
-      ],
-      "notes": "Keep the imperfect batch in the experiment record: dramatic rise, overflow/collapse, pale shell, then corrective caramelization."
-    },
-    {
-      "id": "AY-CUL-004",
-      "name": "Tarte Bourdaloue — Ayala Variation",
-      "cat": "Pastry",
-      "status": "Recovered",
-      "v": "1.0",
-      "emoji": "🍐",
-      "desc": "Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.",
-      "ingredients": [
-        "Pâte sucrée: ~150 g flour, 113 g butter, 40 g powdered sugar, 1 yolk",
-        "Frangipane: 113 g butter, 100 g sugar, 100 g almond flour, 2 eggs",
-        "Pears",
-        "~3 cups water",
-        "½ cup sugar",
-        "Orange peel",
-        "½ vanilla bean",
-        "1 Tbsp Grand Marnier",
-        "1 Tbsp dark rum"
-      ],
-      "method": [
-        "Prepare and chill pâte sucrée.",
-        "Poach pears gently with vanilla, orange and liqueurs; drain well.",
-        "Prepare frangipane.",
-        "Fill shell and arrange pears.",
-        "Bake until almond filling is set and deeply golden."
-      ],
-      "notes": "Preserve the Ayala poaching variation rather than normalizing it to a generic Bourdaloue."
-    }
-  ],
-  "recovery_queue": [
-    {
-      "id": "AY-CUL-005",
-      "name": "Cranberry–Cherry Clafoutis"
-    },
-    {
-      "id": "AY-CUL-006",
-      "name": "Red-Wine Cherry & Orange Clafoutis"
-    },
-    {
-      "id": "AY-CUL-007",
-      "name": "Chocolate–Framboise Tart"
-    },
-    {
-      "id": "AY-CUL-008",
-      "name": "Grand Marnier Sourdough Bread Pudding"
-    },
-    {
-      "id": "AY-CUL-009",
-      "name": "Smoky Baba Ganoush"
-    },
-    {
-      "id": "AY-CUL-010",
-      "name": "Experimental Hummus Collection"
-    },
-    {
-      "id": "AY-CUL-F01",
-      "name": "Pâte Sucrée"
-    },
-    {
-      "id": "AY-CUL-F02",
-      "name": "Browned Butter"
-    },
-    {
-      "id": "AY-CUL-F03",
-      "name": "Grand Marnier Caramelized Fruit"
-    },
-    {
-      "id": "AY-CUL-F04",
-      "name": "Vanilla Pastry Custard"
-    }
-  ]
-}
+[
+  {
+    "id": "AY-CUL-001",
+    "title": "Peach–Grand Marnier Flan Pâtissier",
+    "category": "French Pastry · Flan",
+    "version": "v1.1",
+    "date": "Aug 2026",
+    "status": "Tested",
+    "summary": "Vanilla-bean flan pâtissier layered with peaches caramelized in butter, sugar, orange zest and Grand Marnier.",
+    "accent": "🍑",
+    "ingredients": [
+      "Pâte sucrée shell, frozen before filling",
+      "6 small egg yolks (or 4 large yolks + 1 extra yolk)",
+      "750 g whole milk",
+      "150 g sugar",
+      "45 g cornstarch",
+      "25 g flour",
+      "1 vanilla bean",
+      "Peaches, sliced",
+      "Butter, sugar, orange zest and Grand Marnier for caramelizing"
+    ],
+    "method": [
+      "Caramelize the peaches in butter, sugar, orange zest and Grand Marnier; cool completely.",
+      "Heat milk with vanilla. Whisk yolks with sugar, cornstarch and flour.",
+      "Temper the yolk mixture, return to the heat and cook until very thick.",
+      "Layer custard and peaches in the frozen pâte sucrée shell; finish with peaches on top.",
+      "Bake until deeply set and caramelized at the edges. Chill thoroughly before slicing."
+    ],
+    "notes": "Two layers of peaches gave the finished flan a more dramatic fruit profile. The extra small yolk strengthened the custard."
+  },
+  {
+    "id": "AY-CUL-002",
+    "title": "Grand Marnier Madeleines",
+    "category": "French Classics",
+    "version": "v2.0",
+    "date": "Aug 2026",
+    "status": "Tested / evolving",
+    "summary": "Browned-butter madeleines built around Grand Marnier, orange, honey and overnight maturation.",
+    "accent": "🧈",
+    "ingredients": [
+      "2 eggs",
+      "100 g sugar",
+      "120 g flour",
+      "100 g browned butter",
+      "Grand Marnier",
+      "Honey",
+      "Orange zest",
+      "Pinch of salt"
+    ],
+    "method": [
+      "Brown the butter and cool until warm, not hot.",
+      "Whisk eggs and sugar until smooth; fold in flour and salt.",
+      "Add browned butter, Grand Marnier, honey and orange zest.",
+      "Cover and refrigerate overnight.",
+      "Bake cold batter in a well-prepared madeleine pan until domed and golden."
+    ],
+    "notes": "An overnight rest improves hydration, aroma integration and the characteristic hump."
+  },
+  {
+    "id": "AY-CUL-003",
+    "title": "Canelés de Bordeaux",
+    "category": "French Classics",
+    "version": "v1.x",
+    "date": "Aug 2026",
+    "status": "Tested / evolving",
+    "summary": "Vanilla canelés developed through flour, mold, maturation and high-heat caramelization experiments.",
+    "accent": "🔥",
+    "ingredients": [
+      "450 g milk",
+      "25 g butter",
+      "1 vanilla bean",
+      "200 g sugar",
+      "95 g flour",
+      "2 eggs + 2 yolks",
+      "Rum or Grand Marnier, optional"
+    ],
+    "method": [
+      "Infuse milk with vanilla and butter; cool slightly.",
+      "Combine sugar and flour, then incorporate eggs and yolks without excessive aeration.",
+      "Gradually add warm milk; add spirit if using.",
+      "Rest batter at least overnight.",
+      "Bake in prepared molds with an initial high-heat phase, then reduce heat until mahogany-dark and crisp."
+    ],
+    "notes": "The archive tracks mold material, beeswax/butter treatment and the high-heat caramelization window."
+  },
+  {
+    "id": "AY-CUL-004",
+    "title": "Tarte Bourdaloue — Ayala Variation",
+    "category": "Tarts & Pies",
+    "version": "v1.0",
+    "date": "Aug 2026",
+    "status": "Recovered",
+    "summary": "Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.",
+    "accent": "🍐",
+    "ingredients": [
+      "Pâte sucrée shell",
+      "Almond cream",
+      "Pears",
+      "Vanilla",
+      "Seville orange",
+      "Grand Marnier",
+      "Dark rum"
+    ],
+    "method": [
+      "Prepare and chill the pâte sucrée shell.",
+      "Poach pears with vanilla, citrus and spirits; cool and drain.",
+      "Fill shell with almond cream and arrange pears.",
+      "Bake until the almond cream is deeply golden and the pears are glazed."
+    ],
+    "notes": "Ayala variation: layered citrus and spirit aromatics added to the classic pear-and-frangipane structure."
+  }
+]

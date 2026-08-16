@@ -1,7 +1,13 @@
-ATELIER AYALA v0.2
+ATELIER AYALA v1 — POLISHED MOBILE ARCHIVE
+Files:
+- index.html
+- recipes.json
+- manifest.webmanifest
+- sw.js
+- icon-192.png
+- icon-512.png
 
-Double-click index.html. No server is required.
-All recipe cards are clickable.
-Map / Atlas links to recovered recipes.
-Media Drop previews photos, video and audio in the browser session.
-For permanent media, add files to media/ and update the archive.
+GitHub Pages:
+Upload all six files to the root of the atelier-ayala repository.
+Existing Android shortcut can remain; after GitHub redeploys, reopen it.
+For a refreshed custom icon, remove the old shortcut and add/install it again after deployment.
