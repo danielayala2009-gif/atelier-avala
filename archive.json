@@ -1,0 +1,360 @@
+{
+  "title": "Atelier Ayala — The Culinary Atlas",
+  "version": "0.3",
+  "original_creations": [
+    {
+      "id": "AY-CUL-001",
+      "name": "Peach–Grand Marnier Flan Pâtissier",
+      "category": "Original Creations",
+      "status": "Tested",
+      "emoji": "🍑",
+      "summary": "Vanilla-bean flan pâtissier layered with Grand Marnier–caramelized peaches and orange zest."
+    },
+    {
+      "id": "AY-CUL-002",
+      "name": "Grand Marnier Madeleines",
+      "category": "Original Creations",
+      "status": "Tested / evolving",
+      "emoji": "🧈",
+      "summary": "Browned-butter madeleines developed around Grand Marnier, orange, honey and overnight maturation."
+    },
+    {
+      "id": "AY-CUL-003",
+      "name": "Canelés de Bordeaux",
+      "category": "Original Creations",
+      "status": "Tested / evolving",
+      "emoji": "🔥",
+      "summary": "Canelés developed through flour, mold, maturation and caramelization experiments."
+    },
+    {
+      "id": "AY-CUL-004",
+      "name": "Tarte Bourdaloue — Ayala Variation",
+      "category": "Original Creations",
+      "status": "Recovered",
+      "emoji": "🍐",
+      "summary": "Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears."
+    }
+  ],
+  "training_archive": [
+    {
+      "id": "AY-TRN-001",
+      "name": "Untitled",
+      "category": "Other",
+      "source_href": "Recipes/Untitled.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-002",
+      "name": "2407 Forte Choco noisette (9)",
+      "category": "Other",
+      "source_href": "Recipes/2407 Forte Choco noisette (9).html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-003",
+      "name": "2607 Buche De noel",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/2607 Buche De noel.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-004",
+      "name": "2707 Feiille D’automne",
+      "category": "Other",
+      "source_href": "Recipes/2707 Feiille D’automne.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-005",
+      "name": "Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-006",
+      "name": "Bavaroix Aux Trois Chocolat",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Bavaroix Aux Trois Chocolat.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-007",
+      "name": "Biscuit à la Cuillère ( Lady Fingers)",
+      "category": "Biscuits & Sponges",
+      "source_href": "Recipes/Biscuit à la Cuillère ( Lady Fingers).html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-008",
+      "name": "Bonbon Moulè",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Bonbon Moulè.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-009",
+      "name": "Bûche Carre Gormand (103)",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/Bûche Carre Gormand (103).html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-010",
+      "name": "Cake au Citron",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/Cake au Citron.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-011",
+      "name": "Cake Marbré",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/Cake Marbré.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-012",
+      "name": "Cannelés bordelais",
+      "category": "Viennoiserie & Classics",
+      "source_href": "Recipes/Cannelés bordelais.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-013",
+      "name": "Crème Anglaise",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème Anglaise.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-014",
+      "name": "Crème au Beurre",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème au Beurre.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-015",
+      "name": "Crème au Beurre Café",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème au Beurre Café.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-016",
+      "name": "Crème au Beurre Praliné",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème au Beurre Praliné.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-017",
+      "name": "Crème Bavaroise",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème Bavaroise.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-018",
+      "name": "Crème d’Amandes",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème d’Amandes.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-019",
+      "name": "Crème Mousseline",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème Mousseline.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-020",
+      "name": "Crème Pâtissière",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème Pâtissière.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-021",
+      "name": "Crème Pâtissière au Chocolat",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème Pâtissière au Chocolat.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-022",
+      "name": "Crème Pâtissière avec Beurre",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Crème Pâtissière avec Beurre.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-023",
+      "name": "Croissants",
+      "category": "Viennoiserie & Classics",
+      "source_href": "Recipes/Croissants.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-024",
+      "name": "Dacquoise",
+      "category": "Biscuits & Sponges",
+      "source_href": "Recipes/Dacquoise.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-025",
+      "name": "Egg Breakdown",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Egg Breakdown.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-026",
+      "name": "Flour",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Flour.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-027",
+      "name": "Gâteau Charlotte",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/Gâteau Charlotte.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-028",
+      "name": "Gâteau Forêt Noire",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/Gâteau Forêt Noire.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-029",
+      "name": "Génoise",
+      "category": "Biscuits & Sponges",
+      "source_href": "Recipes/Génoise.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-030",
+      "name": "Génoise Chocolat",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Génoise Chocolat.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-031",
+      "name": "La Sucette (lollipop) praline",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/La Sucette (lollipop) praline.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-032",
+      "name": "Le Chocolat Dans Tous Des Etats",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Le Chocolat Dans Tous Des Etats.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-033",
+      "name": "Le Chocolat Exotique (58)",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Le Chocolat Exotique (58).html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-034",
+      "name": "Macaron Au Chocolat (63)",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Macaron Au Chocolat (63).html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-035",
+      "name": "Opéra",
+      "category": "Entremets & Gâteaux",
+      "source_href": "Recipes/Opéra.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-036",
+      "name": "Pate Brise And Pate Sucre",
+      "category": "Tarts & Doughs",
+      "source_href": "Recipes/Pate Brise And Pate Sucre.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-037",
+      "name": "Pithiviers",
+      "category": "Tarts & Doughs",
+      "source_href": "Recipes/Pithiviers.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-038",
+      "name": "Starters",
+      "category": "Foundations & Reference",
+      "source_href": "Recipes/Starters.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-039",
+      "name": "Succès",
+      "category": "Biscuits & Sponges",
+      "source_href": "Recipes/Succès.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    },
+    {
+      "id": "AY-TRN-040",
+      "name": "Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake",
+      "category": "Chocolate & Confections",
+      "source_href": "Recipes/Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake.html",
+      "status": "Index recovered — full recipe page needed",
+      "kind": "French Pastry Training Archive"
+    }
+  ]
+}
