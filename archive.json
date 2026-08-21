@@ -1,6 +1,6 @@
 {
   "title": "Atelier Ayala — The Culinary Atlas",
-  "version": "0.3",
+  "version": "5.0",
   "original_creations": [
     {
       "id": "AY-CUL-001",
@@ -41,320 +41,458 @@
       "name": "Untitled",
       "category": "Other",
       "source_href": "Recipes/Untitled.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/B095B388-4814-4C9F-ABFD-88F8CB7C9F4F-259-0000000E200EFE01/F100237D-06C7-418B-9E49-A60B9967BC6E-259-0000000E65164FA9.jpg",
+      "has_method": true
     },
     {
       "id": "AY-TRN-002",
       "name": "2407 Forte Choco noisette (9)",
       "category": "Other",
       "source_href": "Recipes/2407 Forte Choco noisette (9).html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/CC1B5437-9201-4261-B132-08A50D25B1B1-230-00000002E8298E7E/EDE69C60-DE50-419F-A442-595275B208B1-230-0000000B8B9019B7.jpg",
+      "ingredient_count": 10,
+      "has_method": true
     },
     {
       "id": "AY-TRN-003",
       "name": "2607 Buche De noel",
       "category": "Entremets & Gâteaux",
       "source_href": "Recipes/2607 Buche De noel.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "ingredient_count": 18,
+      "has_method": true
     },
     {
       "id": "AY-TRN-004",
       "name": "2707 Feiille D’automne",
       "category": "Other",
       "source_href": "Recipes/2707 Feiille D’automne.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/F13FA563-D6F0-423A-8514-6950A545F92E-240-00000001C4E767C0/CD864E12-5C27-4663-823D-62D85EA33610-240-000000067B3479BA.jpg",
+      "ingredient_count": 5,
+      "has_method": true
     },
     {
       "id": "AY-TRN-005",
       "name": "Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "ingredient_count": 7,
+      "has_method": true
     },
     {
       "id": "AY-TRN-006",
       "name": "Bavaroix Aux Trois Chocolat",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/Bavaroix Aux Trois Chocolat.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "ingredient_count": 16,
+      "has_method": true
     },
     {
       "id": "AY-TRN-007",
       "name": "Biscuit à la Cuillère ( Lady Fingers)",
       "category": "Biscuits & Sponges",
-      "source_href": "Recipes/Biscuit à la Cuillère ( Lady Fingers).html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Biscuit à la Cuillère ( Lady Fingers).html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/20D78EEA-7A66-4B71-B668-615A69DF3618-286-0000000476C4B9AB/8681E9FD-0CA7-4827-8284-E03A6E9FF6D8-286-00000006595FBD57.jpg",
+      "has_method": true
     },
     {
       "id": "AY-TRN-008",
       "name": "Bonbon Moulè",
       "category": "Chocolate & Confections",
-      "source_href": "Recipes/Bonbon Moulè.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Bonbon Moulè.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "ingredient_count": 9,
+      "has_method": true
     },
     {
       "id": "AY-TRN-009",
       "name": "Bûche Carre Gormand (103)",
       "category": "Entremets & Gâteaux",
-      "source_href": "Recipes/Bûche Carre Gormand (103).html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Bûche Carre Gormand (103).html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/2008AF97-CF89-4BCE-9449-5EC3C48D7738-207-000000005F734122/C4D29AF9-3BD7-438C-BB9D-AAD960173FBE-259-0000005076439CCD.jpg",
+      "ingredient_count": 23,
+      "has_method": true
     },
     {
       "id": "AY-TRN-010",
       "name": "Cake au Citron",
       "category": "Entremets & Gâteaux",
       "source_href": "Recipes/Cake au Citron.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/61E376E2-09C0-40BA-8008-802ABF6BACDA-286-0000000476E3806C/A040919E-17A8-4F05-80A0-3D2AB8D67463-1542-000002AF6A768F21.jpg",
+      "ingredient_count": 12,
+      "has_method": true
     },
     {
       "id": "AY-TRN-011",
       "name": "Cake Marbré",
       "category": "Entremets & Gâteaux",
-      "source_href": "Recipes/Cake Marbré.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Cake Marbré.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/EBB2F656-FBCF-469B-9C42-E444D50CEAF8-286-0000000476FE33CF/78E165BE-D0E9-49A4-B051-C0E169EC48BA-1726-000003228DB911F3.jpg",
+      "ingredient_count": 16,
+      "has_method": true
     },
     {
       "id": "AY-TRN-012",
       "name": "Cannelés bordelais",
       "category": "Viennoiserie & Classics",
-      "source_href": "Recipes/Cannelés bordelais.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Cannelés bordelais.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/4984B484-7EE0-4B32-B620-BFC5C4EE2831-286-0000000477147926/053B2090-1441-474C-B4AA-ED16C457AD53-774-0000017E7EE960F0.jpg",
+      "ingredient_count": 9,
+      "has_method": true
     },
     {
       "id": "AY-TRN-013",
       "name": "Crème Anglaise",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème Anglaise.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème Anglaise.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/87DC46AF-0A70-4F7F-96A9-399A08626CF5-286-0000000477202E0D/65321D8C-9685-488D-BEEE-5C1E9A89A5B4-286-00000006D2EBE755.jpg",
+      "ingredient_count": 3,
+      "has_method": true
     },
     {
       "id": "AY-TRN-014",
       "name": "Crème au Beurre",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème au Beurre.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème au Beurre.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/65022E5A-54A6-41B6-B6C8-444AB893F72D-286-00000004773FE2BE/EB611EB9-8A36-47D9-BAA2-5E9A55A7F624-567-0000008DD192449B.jpg",
+      "ingredient_count": 4,
+      "has_method": true
     },
     {
       "id": "AY-TRN-015",
       "name": "Crème au Beurre Café",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème au Beurre Café.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème au Beurre Café.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/B8766545-1F02-4AAE-BD13-261EEB6C35E2-286-000000047725BC8B/15F15FE6-4E62-41BA-8A6D-87FDA24D7AF5-286-000000072B97BF97.jpg",
+      "ingredient_count": 5,
+      "has_method": true
     },
     {
       "id": "AY-TRN-016",
       "name": "Crème au Beurre Praliné",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème au Beurre Praliné.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème au Beurre Praliné.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/E3FF1043-E332-42A4-B88F-989EBEBF8E8B-286-000000047730BA36/2D9B1AAA-0A56-45DF-A468-E1D547EA93FD-774-0000013097C9B2B2.jpg",
+      "ingredient_count": 5,
+      "has_method": true
     },
     {
       "id": "AY-TRN-017",
       "name": "Crème Bavaroise",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème Bavaroise.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème Bavaroise.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/E0111423-4714-4D68-A9AA-8506983F9871-286-00000004774A44EA/F4579BC2-33A1-4294-94BF-1B06AE1F51A4-286-00000007873F1965.jpg",
+      "ingredient_count": 6,
+      "has_method": true
     },
     {
       "id": "AY-TRN-018",
       "name": "Crème d’Amandes",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème d’Amandes.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème d’Amandes.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/39848CDB-BF24-453A-9887-527EE88E8491-286-00000004774E1CFD/115025C0-04B1-4BB8-BEAC-79781A27272D-286-000000083781F10B.jpg",
+      "ingredient_count": 5,
+      "has_method": true
     },
     {
       "id": "AY-TRN-019",
       "name": "Crème Mousseline",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème Mousseline.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème Mousseline.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/4CE23F40-BFC7-4BEE-AEE0-77BBF6824DB3-286-000000047751D315/E720D9BF-0C4D-4F35-986A-FC194CB4AFB4-286-000000088423C63E.jpg",
+      "ingredient_count": 7,
+      "has_method": true
     },
     {
       "id": "AY-TRN-020",
       "name": "Crème Pâtissière",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème Pâtissière.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème Pâtissière.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/42D3D7F9-1D77-424A-A0B0-0ED7D070CCAF-286-00000004775D8F79/EDF3D66B-688A-4038-9449-A97FBEB4CC8B-286-00000008D2BCF455.jpg",
+      "ingredient_count": 4,
+      "has_method": true
     },
     {
       "id": "AY-TRN-021",
       "name": "Crème Pâtissière au Chocolat",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème Pâtissière au Chocolat.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème Pâtissière au Chocolat.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/9B1FA09D-E082-40F9-92AF-83D48E6E613F-286-0000000477560D66/BE5CFA5F-7652-4FAE-82C0-623092215808-286-000000091D828C27.jpg",
+      "ingredient_count": 6,
+      "has_method": true
     },
     {
       "id": "AY-TRN-022",
       "name": "Crème Pâtissière avec Beurre",
       "category": "Foundations & Reference",
-      "source_href": "Recipes/Crème Pâtissière avec Beurre.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Crème Pâtissière avec Beurre.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/A7BEC1F9-DA40-42C1-B139-25744C279BA0-286-000000047759EBC2/C62A3262-1820-439E-8386-BD7B03B2BACB-286-000000096963F77A.jpg",
+      "ingredient_count": 7,
+      "has_method": true
     },
     {
       "id": "AY-TRN-023",
       "name": "Croissants",
       "category": "Viennoiserie & Classics",
       "source_href": "Recipes/Croissants.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true
     },
     {
       "id": "AY-TRN-024",
       "name": "Dacquoise",
       "category": "Biscuits & Sponges",
       "source_href": "Recipes/Dacquoise.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/9271CEB9-92FE-4D25-B610-31CADA5EDD0E-286-00000004776AF349/DF0D3066-948D-48D0-921D-FD8BAC106226-774-0000013188ED83BA.jpg",
+      "ingredient_count": 7,
+      "has_method": true
     },
     {
       "id": "AY-TRN-025",
       "name": "Egg Breakdown",
       "category": "Foundations & Reference",
       "source_href": "Recipes/Egg Breakdown.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/33D7A385-04B3-458A-9A92-00DB5A82D838-286-0000000431902627/93CBFEDD-7AEB-4216-BCEC-7B184A5906EB-286-00000009D5CF3DA0.jpg"
     },
     {
       "id": "AY-TRN-026",
       "name": "Flour",
       "category": "Foundations & Reference",
       "source_href": "Recipes/Flour.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/3EC33871-E463-4942-BFF1-99E7F11ACCA9-286-00000004319D0CCE/272AC677-6FD0-4E86-A9E0-784B1CE3867C-286-0000000A19BC2F38.jpg"
     },
     {
       "id": "AY-TRN-027",
       "name": "Gâteau Charlotte",
       "category": "Entremets & Gâteaux",
-      "source_href": "Recipes/Gâteau Charlotte.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Gâteau Charlotte.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/709A39F3-D922-4076-9367-D556DA4BE45A-286-000000047778AB6D/DEA26892-642A-448E-AB7B-ED4AA1D087AD-508-00000088715B4B4B.jpg",
+      "ingredient_count": 2,
+      "has_method": true
     },
     {
       "id": "AY-TRN-028",
       "name": "Gâteau Forêt Noire",
       "category": "Entremets & Gâteaux",
-      "source_href": "Recipes/Gâteau Forêt Noire.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Gâteau Forêt Noire.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/78CC3954-F6AA-40E3-966D-11A1B31C0945-286-00000004778CC7A2/69DD0358-2C21-42BD-9EC4-4EDDF2478970-774-0000018032E0A5B8.jpg",
+      "ingredient_count": 14,
+      "has_method": true
     },
     {
       "id": "AY-TRN-029",
       "name": "Génoise",
       "category": "Biscuits & Sponges",
-      "source_href": "Recipes/Génoise.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Génoise.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/AEB23B4E-FC30-480C-B0CC-A6C8F4360FF8-286-00000004779C985F/404DF972-33F6-45D7-9049-212380156874-286-0000000A57953A44.jpg",
+      "ingredient_count": 4,
+      "has_method": true
     },
     {
       "id": "AY-TRN-030",
       "name": "Génoise Chocolat",
       "category": "Chocolate & Confections",
-      "source_href": "Recipes/Génoise Chocolat.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Génoise Chocolat.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/D0D1BCAE-FF42-4EF7-BB2A-3E9005EEEBC7-286-000000047798E380/285D98A9-AEFF-4101-B294-91A30ECDB421-286-0000000A91AF09E4.jpg",
+      "ingredient_count": 6,
+      "has_method": true
     },
     {
       "id": "AY-TRN-031",
       "name": "La Sucette (lollipop) praline",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/La Sucette (lollipop) praline.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "has_method": true
     },
     {
       "id": "AY-TRN-032",
       "name": "Le Chocolat Dans Tous Des Etats",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/Le Chocolat Dans Tous Des Etats.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "has_method": true
     },
     {
       "id": "AY-TRN-033",
       "name": "Le Chocolat Exotique (58)",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/Le Chocolat Exotique (58).html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "has_method": true
     },
     {
       "id": "AY-TRN-034",
       "name": "Macaron Au Chocolat (63)",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/Macaron Au Chocolat (63).html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "ingredient_count": 11,
+      "has_method": true
     },
     {
       "id": "AY-TRN-035",
       "name": "Opéra",
       "category": "Entremets & Gâteaux",
-      "source_href": "Recipes/Opéra.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Opéra.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/46C5C0B4-4E1E-412E-8EAE-D0742E6E6D6C-286-0000000477A5AADD/6BB647F9-B59A-4D7C-BE14-630196C5B8B6-567-000000BA0F84A686.jpg",
+      "ingredient_count": 22,
+      "has_method": true
     },
     {
       "id": "AY-TRN-036",
       "name": "Pate Brise And Pate Sucre",
       "category": "Tarts & Doughs",
       "source_href": "Recipes/Pate Brise And Pate Sucre.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true
     },
     {
       "id": "AY-TRN-037",
       "name": "Pithiviers",
       "category": "Tarts & Doughs",
       "source_href": "Recipes/Pithiviers.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/069FF8A7-404C-4E3B-A38C-1B02026DE0AF-286-0000000477B3AAE9/C67F0264-DE22-4716-9DB6-62E8ACFD7A38-2114-000003FE9F97E0B6.jpg",
+      "ingredient_count": 5,
+      "has_method": true
     },
     {
       "id": "AY-TRN-038",
       "name": "Starters",
       "category": "Foundations & Reference",
       "source_href": "Recipes/Starters.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/5E01A18B-710B-457B-B544-E60FC083F7CF-286-0000000431A3F7D3/8EDF3B13-381F-418D-9E49-84FE50917EC5-286-0000000BE41EF913.jpg"
     },
     {
       "id": "AY-TRN-039",
       "name": "Succès",
       "category": "Biscuits & Sponges",
-      "source_href": "Recipes/Succès.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "source_href": "Recipes/Succès.html",
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "photo": "Recipes/Images/965569B0-B8F9-4928-A67A-963AFA79446F-286-0000000477C81D1C/847AAB87-1514-45D0-A5B7-5DCACA9B21CA-774-00000131F7083141.jpg",
+      "ingredient_count": 8,
+      "has_method": true
     },
     {
       "id": "AY-TRN-040",
       "name": "Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake",
       "category": "Chocolate & Confections",
       "source_href": "Recipes/Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake.html",
-      "status": "Index recovered — full recipe page needed",
-      "kind": "French Pastry Training Archive"
+      "status": "Original recipe page restored",
+      "kind": "French Pastry Training Archive",
+      "page_found": true,
+      "ingredient_count": 19,
+      "has_method": true
     }
-  ]
+  ],
+  "restoration": {
+    "recipe_pages": 40,
+    "photographed_pages": 29
+  }
 }
