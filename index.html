@@ -1,584 +1,70 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Atelier Ayala — Culinary Atlas</title>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#67172b" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon-192.png" />
+<title>Atelier Ayala — The Culinary Atlas</title>
 <style>
-:root{--bg:#f4eee5;--paper:#fffaf3;--ink:#27211d;--muted:#776c62;--wine:#702b3d;--line:#d8c9b7;--gold:#ad7d43}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,serif}
-header{padding:38px 6vw 24px;background:linear-gradient(135deg,#fffaf3,#eadcc9);border-bottom:1px solid var(--line)}
-h1{font-size:clamp(42px,7vw,76px);line-height:.95;margin:6px 0 12px} .eyebrow,.id,.status,.nav button,select,input{font-family:Arial,sans-serif}
-.eyebrow{letter-spacing:.18em;text-transform:uppercase;color:var(--wine);font-size:12px;font-weight:700}
-.nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.nav button{border:1px solid var(--line);background:white;border-radius:18px;padding:10px 14px;cursor:pointer}
-.nav button.active{background:var(--wine);color:white}main{padding:30px 6vw 70px}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}input[type=search],select{padding:12px 14px;border:1px solid var(--line);border-radius:18px;background:white}
-input[type=search]{min-width:min(420px,100%)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}.cardbtn{all:unset;display:block;cursor:pointer;width:100%}
-.photo{height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:white;padding:15px}
-.photo span{font-size:46px}.photo small{font:12px Arial,sans-serif;margin-top:6px}.placeholder{background:linear-gradient(145deg,#b48863,#6c3f46)}.originalph{background:linear-gradient(145deg,#d8b98e,#8b5361)}
-.body{padding:17px}.id{font-size:11px;letter-spacing:.08em;color:var(--wine);font-weight:700}.body h3{font-size:21px;margin:6px 0}.body p{color:var(--muted);line-height:1.4}
-.status{font-size:11px;border:1px solid #ccb794;border-radius:12px;padding:5px 8px;display:inline-block}
-.drawer{display:none;padding:18px;border-top:1px solid var(--line)}.card.open .drawer{display:block}.tabs{display:flex;gap:6px;flex-wrap:wrap}
-.tabs button{border:1px solid var(--line);background:white;border-radius:15px;padding:7px 10px;cursor:pointer}.pane{line-height:1.5;padding-top:12px}.hidden{display:none!important}
-.notice{background:#f1e3cf;padding:12px;border-radius:12px}.drop{display:block;border:2px dashed var(--line);border-radius:14px;padding:18px;text-align:center;cursor:pointer}
-.drop input{display:block;margin:10px auto 0;max-width:100%}.preview{margin-top:10px;padding:10px;border:1px solid var(--line);border-radius:10px;font:12px Arial,sans-serif}
-.preview img,.preview video{max-width:100%;max-height:220px;display:block;margin-top:8px;border-radius:10px}
-.atlas{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.node{min-height:120px;text-align:left;padding:16px;background:var(--paper);border:1px solid var(--line);border-radius:17px;cursor:pointer}
-.node b{display:block;color:var(--wine);font:11px Arial,sans-serif;margin-bottom:8px}.node span{display:block;font-size:17px}.node small{display:block;color:var(--muted);margin-top:8px}
-.hero-stat{display:inline-block;margin-right:12px;padding:8px 12px;background:#fff8ed;border:1px solid var(--line);border-radius:16px;font:12px Arial,sans-serif}
-.mediahub{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
-</style></head>
-<body>
-<header><div class="eyebrow">Recipes · Training · Experiments · Media</div><h1>Atelier Ayala</h1>
-<p>The Culinary Atlas — your original kitchen creations beside a growing French pastry training archive.</p>
-<div><span class="hero-stat">4 original records</span><span class="hero-stat">40 training titles recovered</span><span class="hero-stat">44 atlas nodes</span></div>
-<div class="nav"><button class="active" data-view="library">Library</button><button data-view="atlas">Map / Atlas</button><button data-view="mediahub">Media Drop</button><button data-view="about">Archive Status</button></div>
-</header>
+:root{--wine:#67172b;--wine2:#8b2943;--ink:#241d1c;--cream:#f4eee4;--paper:#fffaf3;--gold:#b3894b;--muted:#7c6f69;--line:#dccfbe;--shadow:0 18px 45px rgba(64,28,31,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f7f1e8 0%,#efe4d7 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}
+.app{min-height:100vh}.topbar{position:sticky;top:0;z-index:40;background:rgba(247,241,232,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(103,23,43,.13)}.topbar-inner{max-width:1180px;margin:auto;display:flex;align-items:center;gap:16px;padding:12px 20px}.brandmark{width:46px;height:46px;border-radius:15px;background:var(--wine);color:#e9cb92;display:grid;place-items:center;font-family:Georgia,serif;font-size:29px;border:1px solid #c59b59;box-shadow:0 8px 22px rgba(103,23,43,.18)}.brandtext{flex:1;text-align:center;line-height:1}.brandtext b{display:block;color:var(--wine);font:700 25px Georgia,serif;letter-spacing:.08em}.brandtext span{font:italic 13px Georgia,serif;color:var(--gold)}.searchIcon{width:38px;height:38px;border:0;background:transparent;color:var(--wine);font-size:24px}
+main{max-width:1180px;margin:auto;padding:34px 20px 80px}.hero{text-align:center;padding:26px 0 20px}.eyebrow{letter-spacing:.28em;text-transform:uppercase;color:var(--wine);font-size:12px}.hero h1{font:700 clamp(44px,7vw,78px) Georgia,serif;margin:8px 0 8px;color:#2a1d1d}.ornament{color:var(--gold);font:34px Georgia,serif}.hero p{font:20px Georgia,serif;color:#5b4b46;margin:8px auto 26px;max-width:720px}
+.nav{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:rgba(255,250,243,.8);box-shadow:0 10px 30px rgba(73,43,34,.06);margin-bottom:24px}.nav button{border:0;background:transparent;padding:13px 8px;color:#6e5a54}.nav button.active{background:linear-gradient(180deg,#fff,#efe1d4);color:var(--wine);font-weight:700;box-shadow:inset 0 -3px 0 var(--wine)}
+.toolbar{display:flex;gap:12px;margin:20px 0 22px}.search{flex:1;padding:14px 17px;border:1px solid var(--line);border-radius:999px;background:#fffdfa;outline:none}.pill{border:0;border-radius:999px;padding:12px 18px;background:var(--wine);color:white}.sectionTitle{display:flex;justify-content:space-between;align-items:end;margin:20px 0 13px}.sectionTitle h2{font:700 27px Georgia,serif;margin:0}.sectionTitle span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:rgba(255,250,243,.92);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:.2s transform,.2s box-shadow}.card:hover{transform:translateY(-2px);box-shadow:0 22px 50px rgba(64,28,31,.17)}.photo{height:260px;width:100%;object-fit:cover;background:#d7c0b0}.cardBody{padding:18px}.meta{font-size:11px;letter-spacing:.09em;color:#907b71;text-transform:uppercase}.card h3{font:700 27px Georgia,serif;color:#3a2226;margin:5px 0}.card p{color:#675750;line-height:1.5}.chips{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.chip{border:1px solid #d7c8b8;border-radius:999px;padding:5px 9px;font-size:11px;color:#745e55;background:#fff}.openBtn{width:100%;padding:12px;border:1px solid #cbb9a4;background:#fffaf5;border-radius:12px;color:var(--wine);font-weight:700}
+.view{display:none}.view.active{display:block}
+/* Atlas */
+.atlasWrap{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.mapPanel,.sidePanel{background:rgba(255,250,243,.9);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}.mapPanel{padding:20px;position:relative;min-height:630px;overflow:hidden}.mapTitle{text-align:center}.mapTitle h2{font:700 34px Georgia,serif;margin:4px}.mapTitle p{color:var(--muted);margin:6px}.mapStage{position:relative;height:500px;margin-top:10px}.france{position:absolute;inset:20px 80px 35px;filter:drop-shadow(0 18px 30px rgba(86,49,42,.12))}.france svg{width:100%;height:100%}.regionMarker{position:absolute;transform:translate(-50%,-50%);border:0;background:transparent;text-align:center}.dot{width:22px;height:22px;border-radius:50%;background:var(--wine);border:4px solid #f2d7a7;box-shadow:0 0 0 5px rgba(103,23,43,.16);margin:auto}.markerLabel{white-space:nowrap;margin-top:8px;padding:6px 9px;border-radius:999px;background:#fffaf4;border:1px solid #d8c6af;color:#4c3033;font-size:11px;box-shadow:0 6px 18px rgba(0,0,0,.06)}.sidePanel{padding:18px}.placeCard{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;border:1px solid #decfbe;border-radius:17px;padding:9px;margin-bottom:12px;background:#fff}.placeCard img{width:110px;height:82px;object-fit:cover;border-radius:12px}.placeCard h4{margin:0 0 4px;font:700 18px Georgia,serif;color:var(--wine)}.placeCard p{margin:0;color:#78655d;font-size:12px}.placeCard button{margin-top:8px;border:0;background:transparent;color:var(--wine);font-weight:700;padding:0}
+/* components/techniques */
+.libraryGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.libCard{background:#fffaf3;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 9px 24px rgba(69,43,32,.07)}.libCard h3{font:700 21px Georgia,serif;margin:0 0 7px;color:#4b2830}.libCard p{color:#75635b;font-size:13px;line-height:1.45}.linkBtn{border:0;background:transparent;color:var(--wine);font-weight:700;padding:4px 0}
+.mediaPanel,.credits{background:#fffaf3;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}.mediaPanel h2,.credits h2{font-family:Georgia,serif}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gallery img{width:100%;height:190px;object-fit:cover;border-radius:14px}.small{font-size:12px;color:#76645d;line-height:1.5}
+/* modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(35,23,25,.58);z-index:100;padding:16px}.modal.open{display:flex}.modalCard{width:min(820px,100%);max-height:92vh;overflow:auto;background:#fffaf3;border-radius:28px;box-shadow:0 35px 90px rgba(0,0,0,.3);position:relative}.modalHero{height:290px;width:100%;object-fit:cover}.close{position:absolute;right:16px;top:16px;width:42px;height:42px;border-radius:50%;border:1px solid #d8c7b3;background:rgba(255,250,243,.95);font-size:24px}.modalBody{padding:24px}.modalBody h2{font:700 38px Georgia,serif;color:#3c2229;margin:4px 0}.tabs{display:flex;gap:4px;overflow:auto;border-bottom:1px solid #decfbe;margin:18px 0}.tabs button{border:0;background:transparent;padding:10px 12px;color:#79655e;white-space:nowrap}.tabs button.active{color:var(--wine);font-weight:700;border-bottom:2px solid var(--wine)}.tabPane{display:none}.tabPane.active{display:block}.list{padding-left:20px;line-height:1.65}.linked{display:flex;flex-wrap:wrap;gap:8px}.linked button{border:1px solid #cdbba4;border-radius:999px;background:#fff;padding:8px 12px;color:var(--wine)}.formula{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.formula h3{font:700 24px Georgia,serif;margin:0 0 8px}.formula ul,.formula ol{line-height:1.6;padding-left:20px}.badge{display:inline-block;border-radius:999px;background:#efe2cf;color:#694b3e;padding:5px 9px;font-size:11px;margin-right:5px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#2e2021;color:white;padding:10px 16px;border-radius:999px;display:none;z-index:120}
+@media(max-width:800px){.topbar-inner{padding:10px 14px}.brandtext b{font-size:20px}.brandmark{width:42px;height:42px}.hero{padding-top:18px}.hero h1{font-size:55px}.hero p{font-size:18px}.nav{grid-template-columns:repeat(5,1fr);border-radius:17px}.nav button{font-size:11px;padding:12px 3px}.grid{grid-template-columns:1fr}.card .photo{height:235px}.atlasWrap{grid-template-columns:1fr}.mapPanel{min-height:580px}.mapStage{height:460px}.france{inset:30px 20px 50px}.libraryGrid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:150px}.formula{grid-template-columns:1fr}.modalHero{height:240px}.modalBody{padding:20px}.modalBody h2{font-size:32px}.toolbar{position:sticky;top:68px;z-index:25;background:#f5eee5;padding:8px 0}.pill{display:none}}
+@media(max-width:460px){main{padding:24px 14px 70px}.hero h1{font-size:48px}.eyebrow{font-size:10px}.card h3{font-size:26px}.placeCard{grid-template-columns:92px 1fr}.placeCard img{width:92px;height:72px}.mapPanel{padding:12px}.mapStage{height:430px}.gallery img{height:130px}}
+</style>
+</head>
+<body><div class="app">
+<header class="topbar"><div class="topbar-inner"><div class="brandmark">A</div><div class="brandtext"><b>ATELIER AYALA</b><span>The Culinary Atlas</span></div><button class="searchIcon" onclick="document.getElementById('search').focus()">⌕</button></div></header>
 <main>
-<section id="library" class="view">
-<div class="controls"><input id="search" type="search" placeholder="Search recipes, techniques or IDs…"><select id="filter"><option>All</option><option>Original Creations</option><option>Biscuits &amp; Sponges</option><option>Chocolate &amp; Confections</option><option>Entremets &amp; Gâteaux</option><option>Foundations &amp; Reference</option><option>Other</option><option>Tarts &amp; Doughs</option><option>Viennoiserie &amp; Classics</option></select></div>
-<div class="eyebrow">Original creations</div><h2>Atelier Ayala Recipes</h2><div class="grid">
-    <article class="card original" data-search="ay-cul-001 peach–grand marnier flan pâtissier vanilla-bean flan pâtissier layered with grand marnier–caramelized peaches and orange zest." data-cat="Original Creations">
-      <button class="cardbtn" type="button">
-        <div class="photo originalph"><span>🍑</span><small>Add your own food photo</small></div>
-        <div class="body"><div class="id">AY-CUL-001</div><h3>Peach–Grand Marnier Flan Pâtissier</h3><p>Vanilla-bean flan pâtissier layered with Grand Marnier–caramelized peaches and orange zest.</p><span class="status">Tested</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Recipe record</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>Vanilla-bean flan pâtissier layered with Grand Marnier–caramelized peaches and orange zest.</p><p><b>Status:</b> Tested</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card original" data-search="ay-cul-002 grand marnier madeleines browned-butter madeleines developed around grand marnier, orange, honey and overnight maturation." data-cat="Original Creations">
-      <button class="cardbtn" type="button">
-        <div class="photo originalph"><span>🧈</span><small>Add your own food photo</small></div>
-        <div class="body"><div class="id">AY-CUL-002</div><h3>Grand Marnier Madeleines</h3><p>Browned-butter madeleines developed around Grand Marnier, orange, honey and overnight maturation.</p><span class="status">Tested / evolving</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Recipe record</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>Browned-butter madeleines developed around Grand Marnier, orange, honey and overnight maturation.</p><p><b>Status:</b> Tested / evolving</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card original" data-search="ay-cul-003 canelés de bordeaux canelés developed through flour, mold, maturation and caramelization experiments." data-cat="Original Creations">
-      <button class="cardbtn" type="button">
-        <div class="photo originalph"><span>🔥</span><small>Add your own food photo</small></div>
-        <div class="body"><div class="id">AY-CUL-003</div><h3>Canelés de Bordeaux</h3><p>Canelés developed through flour, mold, maturation and caramelization experiments.</p><span class="status">Tested / evolving</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Recipe record</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>Canelés developed through flour, mold, maturation and caramelization experiments.</p><p><b>Status:</b> Tested / evolving</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card original" data-search="ay-cul-004 tarte bourdaloue — ayala variation pear-and-almond tart with vanilla, seville orange, grand marnier and dark-rum poached pears." data-cat="Original Creations">
-      <button class="cardbtn" type="button">
-        <div class="photo originalph"><span>🍐</span><small>Add your own food photo</small></div>
-        <div class="body"><div class="id">AY-CUL-004</div><h3>Tarte Bourdaloue — Ayala Variation</h3><p>Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.</p><span class="status">Recovered</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Recipe record</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>Pear-and-almond tart with vanilla, Seville orange, Grand Marnier and dark-rum poached pears.</p><p><b>Status:</b> Recovered</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article></div>
-<div class="eyebrow" style="margin-top:42px">French pastry training archive</div><h2>Recovered Collection</h2><div class="grid">
-    <article class="card training" data-search="ay-trn-001 untitled other" data-cat="Other">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-001</div><h3>Untitled</h3><p>Other</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Untitled.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-002 2407 forte choco noisette (9) other" data-cat="Other">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-002</div><h3>2407 Forte Choco noisette (9)</h3><p>Other</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/2407 Forte Choco noisette (9).html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-003 2607 buche de noel entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-003</div><h3>2607 Buche De noel</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/2607 Buche De noel.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-004 2707 feiille d’automne other" data-cat="Other">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-004</div><h3>2707 Feiille D’automne</h3><p>Other</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/2707 Feiille D’automne.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-005 bauvarois au chocolat blanc et fruits rougesberries (p47)-12 recipe 100g white chocolate chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-005</div><h3>Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-006 bavaroix aux trois chocolat chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-006</div><h3>Bavaroix Aux Trois Chocolat</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Bavaroix Aux Trois Chocolat.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-007 biscuit à la cuillère ( lady fingers) biscuits &amp; sponges" data-cat="Biscuits &amp; Sponges">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-007</div><h3>Biscuit à la Cuillère ( Lady Fingers)</h3><p>Biscuits &amp; Sponges</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Biscuit à la Cuillère ( Lady Fingers).html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-008 bonbon moulè chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-008</div><h3>Bonbon Moulè</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Bonbon Moulè.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-009 bûche carre gormand (103) entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-009</div><h3>Bûche Carre Gormand (103)</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Bûche Carre Gormand (103).html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-010 cake au citron entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-010</div><h3>Cake au Citron</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Cake au Citron.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-011 cake marbré entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-011</div><h3>Cake Marbré</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Cake Marbré.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-012 cannelés bordelais viennoiserie &amp; classics" data-cat="Viennoiserie &amp; Classics">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-012</div><h3>Cannelés bordelais</h3><p>Viennoiserie &amp; Classics</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Cannelés bordelais.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-013 crème anglaise foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-013</div><h3>Crème Anglaise</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème Anglaise.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-014 crème au beurre foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-014</div><h3>Crème au Beurre</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème au Beurre.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-015 crème au beurre café foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-015</div><h3>Crème au Beurre Café</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème au Beurre Café.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-016 crème au beurre praliné foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-016</div><h3>Crème au Beurre Praliné</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème au Beurre Praliné.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-017 crème bavaroise foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-017</div><h3>Crème Bavaroise</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème Bavaroise.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-018 crème d’amandes foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-018</div><h3>Crème d’Amandes</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème d’Amandes.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-019 crème mousseline foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-019</div><h3>Crème Mousseline</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème Mousseline.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-020 crème pâtissière foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-020</div><h3>Crème Pâtissière</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème Pâtissière.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-021 crème pâtissière au chocolat foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-021</div><h3>Crème Pâtissière au Chocolat</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème Pâtissière au Chocolat.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-022 crème pâtissière avec beurre foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-022</div><h3>Crème Pâtissière avec Beurre</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Crème Pâtissière avec Beurre.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-023 croissants viennoiserie &amp; classics" data-cat="Viennoiserie &amp; Classics">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-023</div><h3>Croissants</h3><p>Viennoiserie &amp; Classics</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Croissants.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-024 dacquoise biscuits &amp; sponges" data-cat="Biscuits &amp; Sponges">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-024</div><h3>Dacquoise</h3><p>Biscuits &amp; Sponges</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Dacquoise.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-025 egg breakdown foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-025</div><h3>Egg Breakdown</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Egg Breakdown.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-026 flour foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-026</div><h3>Flour</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Flour.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-027 gâteau charlotte entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-027</div><h3>Gâteau Charlotte</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Gâteau Charlotte.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-028 gâteau forêt noire entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-028</div><h3>Gâteau Forêt Noire</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Gâteau Forêt Noire.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-029 génoise biscuits &amp; sponges" data-cat="Biscuits &amp; Sponges">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-029</div><h3>Génoise</h3><p>Biscuits &amp; Sponges</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Génoise.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-030 génoise chocolat chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-030</div><h3>Génoise Chocolat</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Génoise Chocolat.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-031 la sucette (lollipop) praline chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-031</div><h3>La Sucette (lollipop) praline</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/La Sucette (lollipop) praline.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-032 le chocolat dans tous des etats chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-032</div><h3>Le Chocolat Dans Tous Des Etats</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Le Chocolat Dans Tous Des Etats.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-033 le chocolat exotique (58) chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-033</div><h3>Le Chocolat Exotique (58)</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Le Chocolat Exotique (58).html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-034 macaron au chocolat (63) chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-034</div><h3>Macaron Au Chocolat (63)</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Macaron Au Chocolat (63).html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-035 opéra entremets &amp; gâteaux" data-cat="Entremets &amp; Gâteaux">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-035</div><h3>Opéra</h3><p>Entremets &amp; Gâteaux</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Opéra.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-036 pate brise and pate sucre tarts &amp; doughs" data-cat="Tarts &amp; Doughs">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-036</div><h3>Pate Brise And Pate Sucre</h3><p>Tarts &amp; Doughs</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Pate Brise And Pate Sucre.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-037 pithiviers tarts &amp; doughs" data-cat="Tarts &amp; Doughs">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-037</div><h3>Pithiviers</h3><p>Tarts &amp; Doughs</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Pithiviers.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-038 starters foundations &amp; reference" data-cat="Foundations &amp; Reference">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-038</div><h3>Starters</h3><p>Foundations &amp; Reference</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Starters.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-039 succès biscuits &amp; sponges" data-cat="Biscuits &amp; Sponges">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-039</div><h3>Succès</h3><p>Biscuits &amp; Sponges</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Succès.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article>
-    <article class="card training" data-search="ay-trn-040 tarte croustillante au chocolat aux framboise-crispy chocolate and radpberry cake chocolate &amp; confections" data-cat="Chocolate &amp; Confections">
-      <button class="cardbtn" type="button">
-        <div class="photo placeholder"><span>🥐</span><small>Training archive</small></div>
-        <div class="body"><div class="id">AY-TRN-040</div><h3>Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake</h3><p>Chocolate &amp; Confections</p><span class="status">Recipe page needed</span></div>
-      </button>
-      <div class="drawer">
-        <div class="tabs"><button data-pane="overview">Overview</button><button data-pane="media">Media</button><button data-pane="files">Files</button></div>
-        <div class="pane overview"><p>This title was recovered from the uploaded 40-item recipe index.</p><p><b>Source link:</b> Recipes/Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake.html</p><p class="notice">The individual recipe HTML page was not included in the upload, so ingredients and method are intentionally not invented.</p></div>
-        <div class="pane media hidden"><label class="drop">＋ Add photos / audio / video<input type="file" multiple accept="image/*,audio/*,video/*"></label><div class="previews"></div></div>
-        <div class="pane files hidden"><label class="drop">＋ Attach recipe files<input type="file" multiple accept=".pdf,.html,.htm,.txt,.doc,.docx,image/*"></label><div class="previews"></div></div>
-      </div>
-    </article></div>
-</section>
-<section id="atlas" class="view hidden"><div class="eyebrow">Visual knowledge map</div><h2>Culinary Atlas</h2><p>Every node is clickable. Recovered training recipes are grouped by technique family through their category labels.</p><div class="atlas"><button class="node jump" data-target="AY-CUL-001"><b>AY-CUL-001</b><span>Peach–Grand Marnier Flan Pâtissier</span><small>Original creation</small></button><button class="node jump" data-target="AY-CUL-002"><b>AY-CUL-002</b><span>Grand Marnier Madeleines</span><small>Original creation</small></button><button class="node jump" data-target="AY-CUL-003"><b>AY-CUL-003</b><span>Canelés de Bordeaux</span><small>Original creation</small></button><button class="node jump" data-target="AY-CUL-004"><b>AY-CUL-004</b><span>Tarte Bourdaloue — Ayala Variation</span><small>Original creation</small></button><button class="node jump" data-target="AY-TRN-001"><b>AY-TRN-001</b><span>Untitled</span><small>Other</small></button><button class="node jump" data-target="AY-TRN-002"><b>AY-TRN-002</b><span>2407 Forte Choco noisette (9)</span><small>Other</small></button><button class="node jump" data-target="AY-TRN-003"><b>AY-TRN-003</b><span>2607 Buche De noel</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-004"><b>AY-TRN-004</b><span>2707 Feiille D’automne</span><small>Other</small></button><button class="node jump" data-target="AY-TRN-005"><b>AY-TRN-005</b><span>Bauvarois Au Chocolat Blanc Et Fruits Rougesberries (p47)-12 Recipe 100g White Chocolate</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-006"><b>AY-TRN-006</b><span>Bavaroix Aux Trois Chocolat</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-007"><b>AY-TRN-007</b><span>Biscuit à la Cuillère ( Lady Fingers)</span><small>Biscuits &amp; Sponges</small></button><button class="node jump" data-target="AY-TRN-008"><b>AY-TRN-008</b><span>Bonbon Moulè</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-009"><b>AY-TRN-009</b><span>Bûche Carre Gormand (103)</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-010"><b>AY-TRN-010</b><span>Cake au Citron</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-011"><b>AY-TRN-011</b><span>Cake Marbré</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-012"><b>AY-TRN-012</b><span>Cannelés bordelais</span><small>Viennoiserie &amp; Classics</small></button><button class="node jump" data-target="AY-TRN-013"><b>AY-TRN-013</b><span>Crème Anglaise</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-014"><b>AY-TRN-014</b><span>Crème au Beurre</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-015"><b>AY-TRN-015</b><span>Crème au Beurre Café</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-016"><b>AY-TRN-016</b><span>Crème au Beurre Praliné</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-017"><b>AY-TRN-017</b><span>Crème Bavaroise</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-018"><b>AY-TRN-018</b><span>Crème d’Amandes</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-019"><b>AY-TRN-019</b><span>Crème Mousseline</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-020"><b>AY-TRN-020</b><span>Crème Pâtissière</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-021"><b>AY-TRN-021</b><span>Crème Pâtissière au Chocolat</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-022"><b>AY-TRN-022</b><span>Crème Pâtissière avec Beurre</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-023"><b>AY-TRN-023</b><span>Croissants</span><small>Viennoiserie &amp; Classics</small></button><button class="node jump" data-target="AY-TRN-024"><b>AY-TRN-024</b><span>Dacquoise</span><small>Biscuits &amp; Sponges</small></button><button class="node jump" data-target="AY-TRN-025"><b>AY-TRN-025</b><span>Egg Breakdown</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-026"><b>AY-TRN-026</b><span>Flour</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-027"><b>AY-TRN-027</b><span>Gâteau Charlotte</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-028"><b>AY-TRN-028</b><span>Gâteau Forêt Noire</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-029"><b>AY-TRN-029</b><span>Génoise</span><small>Biscuits &amp; Sponges</small></button><button class="node jump" data-target="AY-TRN-030"><b>AY-TRN-030</b><span>Génoise Chocolat</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-031"><b>AY-TRN-031</b><span>La Sucette (lollipop) praline</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-032"><b>AY-TRN-032</b><span>Le Chocolat Dans Tous Des Etats</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-033"><b>AY-TRN-033</b><span>Le Chocolat Exotique (58)</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-034"><b>AY-TRN-034</b><span>Macaron Au Chocolat (63)</span><small>Chocolate &amp; Confections</small></button><button class="node jump" data-target="AY-TRN-035"><b>AY-TRN-035</b><span>Opéra</span><small>Entremets &amp; Gâteaux</small></button><button class="node jump" data-target="AY-TRN-036"><b>AY-TRN-036</b><span>Pate Brise And Pate Sucre</span><small>Tarts &amp; Doughs</small></button><button class="node jump" data-target="AY-TRN-037"><b>AY-TRN-037</b><span>Pithiviers</span><small>Tarts &amp; Doughs</small></button><button class="node jump" data-target="AY-TRN-038"><b>AY-TRN-038</b><span>Starters</span><small>Foundations &amp; Reference</small></button><button class="node jump" data-target="AY-TRN-039"><b>AY-TRN-039</b><span>Succès</span><small>Biscuits &amp; Sponges</small></button><button class="node jump" data-target="AY-TRN-040"><b>AY-TRN-040</b><span>Tarte Croustillante Au Chocolat Aux Framboise-crispy Chocolate And Radpberry Cake</span><small>Chocolate &amp; Confections</small></button></div></section>
-<section id="mediahub" class="view hidden"><div class="mediahub"><div class="eyebrow">Media intake</div><h2>Drop photos, recordings, videos & files</h2><p>Add material here for preview and sorting. You can also add media inside any individual recipe card.</p><label class="drop">＋ Choose media or files<input id="global" type="file" multiple accept="image/*,audio/*,video/*,.pdf,.html,.htm,.txt,.doc,.docx"></label><div id="globalpreviews"></div></div></section>
-<section id="about" class="view hidden"><div class="mediahub"><div class="eyebrow">Archive status</div><h2>What is live now</h2><p><b>44 clickable records</b> are present: four Atelier Ayala originals and all 40 titles recovered from the uploaded recipe index.</p><p>The uploaded file only contained the index links, not the 40 linked recipe pages. Those training entries are therefore intentionally labeled <b>Recipe page needed</b>; no ingredients or methods were invented.</p><p>When the original <b>Recipes</b> folder or a ZIP containing those linked HTML files is added, the training cards can be populated with the actual source recipes.</p></div></section>
-</main>
+<section class="hero"><div class="eyebrow">Recipes · Experiments · Techniques · Places</div><h1>Atelier Ayala</h1><div class="ornament">❦</div><p>Open every card. Preserve every experiment. Follow every ingredient, technique and place through the archive.</p></section>
+<nav class="nav" id="nav"><button class="active" data-view="recipes">Recipes</button><button data-view="atlas">Atlas</button><button data-view="components">Components</button><button data-view="techniques">Techniques</button><button data-view="media">Media</button></nav>
+<div class="toolbar"><input id="search" class="search" placeholder="Search recipes, components, techniques or places…"><button class="pill" id="clear">Clear</button></div>
+<section id="recipes" class="view active"><div class="sectionTitle"><h2>Recipe Archive</h2><span id="recipeCount"></span></div><div class="grid" id="recipeGrid"></div></section>
+<section id="atlas" class="view"><div class="sectionTitle"><h2>Pastry Atlas</h2><span>France · living map</span></div><div class="atlasWrap"><div class="mapPanel"><div class="mapTitle"><h2>France</h2><p>Tap a marker to enter the pastry archive through place.</p></div><div class="mapStage"><div class="france"><svg viewBox="0 0 500 560" aria-label="Stylized map of France"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0d9b8"/><stop offset="1" stop-color="#dcbf92"/></linearGradient></defs><path d="M212 28 L307 44 L365 98 L429 119 L465 187 L425 251 L446 332 L394 387 L362 475 L286 522 L204 486 L126 503 L76 434 L49 355 L71 282 L35 214 L83 139 L146 114 L168 54 Z" fill="url(#g)" stroke="#8d653e" stroke-width="4"/><path d="M218 488 L247 541 L278 503" fill="#d7b27e" stroke="#8d653e" stroke-width="3"/></svg></div><div id="markers"></div></div></div><aside class="sidePanel" id="placeList"></aside></div><div class="credits" style="margin-top:18px"><h2>Visual references & credits</h2><p class="small">The pastry photographs in this build are visual reference images from Wikimedia Commons and are credited here so the archive remains transparent. Replace them with your own Atelier photographs as your archive grows.</p><div class="small"><b>Flan pâtissier:</b> Strovichky — CC BY-SA 4.0 · <b>Madeleines:</b> Rufino Uribe — CC BY-SA 2.0 · <b>Tarte Bourdaloue:</b> traaf — CC BY-SA 2.0 · <b>Canelé:</b> existing Atelier v3 reference asset.</div></div></section>
+<section id="components" class="view"><div class="sectionTitle"><h2>Master Components</h2><span>Reusable formulas</span></div><div class="libraryGrid" id="componentGrid"></div></section>
+<section id="techniques" class="view"><div class="sectionTitle"><h2>Technique Library</h2><span>Clickable methods & experiments</span></div><div class="libraryGrid" id="techniqueGrid"></div></section>
+<section id="media" class="view"><div class="sectionTitle"><h2>Media Table</h2><span>Reference imagery now · your Atelier photography next</span></div><div class="mediaPanel"><div class="gallery"><img src="flan.jpg" alt="Flan pâtissier"><img src="madeleines.jpg" alt="Madeleines"><img src="canele.jpg" alt="Canelés"><img src="bourdaloue.jpg" alt="Tarte Bourdaloue"></div><p class="small">This static GitHub build keeps media in the repository. Your own photographs can replace these image files later without changing the recipe IDs or archive links.</p></div></section>
+</main></div>
+<div class="modal" id="modal"><div class="modalCard"><button class="close" id="close">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
 <script>
-const nav=[...document.querySelectorAll('.nav button')], views=[...document.querySelectorAll('.view')];
-function show(id){views.forEach(v=>v.classList.toggle('hidden',v.id!==id));nav.forEach(b=>b.classList.toggle('active',b.dataset.view===id));}
-nav.forEach(b=>b.onclick=()=>show(b.dataset.view));
-document.querySelectorAll('.card').forEach(c=>{c.id=c.querySelector('.id').textContent;c.querySelector('.cardbtn').onclick=()=>c.classList.toggle('open');c.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{c.querySelectorAll('.pane').forEach(p=>p.classList.add('hidden'));c.querySelector('.'+b.dataset.pane).classList.remove('hidden');});});
-document.querySelectorAll('.jump').forEach(b=>b.onclick=()=>{show('library');const c=document.getElementById(b.dataset.target);if(c){c.classList.add('open');c.scrollIntoView({behavior:'smooth',block:'center'});}});
-function refilter(){const q=document.getElementById('search').value.toLowerCase(), f=document.getElementById('filter').value;document.querySelectorAll('.card').forEach(c=>{const okq=c.dataset.search.includes(q), okf=f==='All'||c.dataset.cat===f;c.classList.toggle('hidden',!(okq&&okf));});}
-document.getElementById('search').oninput=refilter;document.getElementById('filter').onchange=refilter;
-function previews(inp,target){[...inp.files].forEach(f=>{let d=document.createElement('div');d.className='preview';d.textContent=f.name+' · '+Math.round(f.size/1024)+' KB';if(f.type.startsWith('image/')){let x=document.createElement('img');x.src=URL.createObjectURL(f);d.appendChild(x)}else if(f.type.startsWith('video/')){let x=document.createElement('video');x.controls=true;x.src=URL.createObjectURL(f);d.appendChild(x)}else if(f.type.startsWith('audio/')){let x=document.createElement('audio');x.controls=true;x.src=URL.createObjectURL(f);d.appendChild(x)}target.appendChild(d)})}
-document.querySelectorAll('.card input[type=file]').forEach(i=>i.onchange=()=>previews(i,i.closest('.pane').querySelector('.previews')));
-document.getElementById('global').onchange=e=>previews(e.target,document.getElementById('globalpreviews'));
-</script></body></html>
+let DB={recipes:[],components:[],techniques:[],places:[]};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+fetch('recipes.json?v=4').then(r=>r.json()).then(d=>{DB=d;renderAll();}).catch(()=>toast('Could not load archive data.'));
+function renderAll(){renderRecipes(DB.recipes);renderComponents(DB.components);renderTechniques(DB.techniques);renderAtlas();}
+function renderRecipes(items){$('#recipeCount').textContent=`${items.length} records`;$('#recipeGrid').innerHTML=items.map(r=>`<article class="card"><img class="photo" src="${r.photo}" alt="${esc(r.title)}"><div class="cardBody"><div class="meta">${r.id} · ${r.category}</div><h3>${r.title}</h3><p>${r.summary}</p><div class="chips"><span class="chip">${r.version}</span><span class="chip">${r.region}</span><span class="chip">${r.date}</span></div><button class="openBtn" onclick="openRecipe('${r.id}')">Open archive card</button></div></article>`).join('')}
+function renderComponents(items){$('#componentGrid').innerHTML=items.map(c=>`<article class="libCard"><span class="badge">${c.type}</span><h3>${c.title}</h3><p>${c.yield}</p><button class="linkBtn" onclick="openComponent('${c.id}')">Open formula →</button></article>`).join('')}
+function renderTechniques(items){$('#techniqueGrid').innerHTML=items.map(t=>`<article class="libCard"><span class="badge">${t.family}</span><h3>${t.title}</h3><p>${t.summary}</p><button class="linkBtn" onclick="openTechnique('${t.id}')">Open technique →</button></article>`).join('')}
+function renderAtlas(){const ms=$('#markers'),pl=$('#placeList');ms.innerHTML=DB.places.map(p=>`<button class="regionMarker" style="left:${p.x}%;top:${p.y}%" onclick="openPlace('${p.id}')"><div class="dot"></div><div class="markerLabel">${p.name}</div></button>`).join('');pl.innerHTML=`<h3 style="font:700 24px Georgia,serif;margin-top:2px">Regional pastry routes</h3>`+DB.places.map(p=>`<div class="placeCard"><img src="${p.image}" alt="${p.label}"><div><h4>${p.name}</h4><p>${p.region}<br>${p.label}</p><button onclick="openPlace('${p.id}')">Enter this place →</button></div></div>`).join('')}
+function openRecipe(id){const r=DB.recipes.find(x=>x.id===id);if(!r)return;const comps=(r.components||[]).map(id=>DB.components.find(c=>c.id===id)).filter(Boolean);const tech=(r.techniques||[]).map(id=>DB.techniques.find(t=>t.id===id)).filter(Boolean);show(`<img class="modalHero" src="${r.photo}" alt="${esc(r.title)}"><div class="modalBody"><div class="meta">${r.id} · ${r.category}</div><h2>${r.title}</h2><div><span class="badge">${r.version}</span><span class="badge">${r.region}</span><span class="badge">${r.date}</span></div><p>${r.summary}</p><div class="tabs"><button class="active" data-tab="overview">Overview</button><button data-tab="ingredients">Ingredients</button><button data-tab="method">Method</button><button data-tab="notes">Notes</button><button data-tab="connections">Connections</button></div><div class="tabPane active" data-pane="overview"><p>${r.summary}</p><p><b>Archive logic:</b> this recipe links to its reusable sub-recipes and techniques rather than treating them as dead text.</p></div><div class="tabPane" data-pane="ingredients"><h3 style="font-family:Georgia,serif">Component recipes</h3><div class="linked">${comps.map(c=>`<button onclick="openComponent('${c.id}')">${c.title} →</button>`).join('')}</div></div><div class="tabPane" data-pane="method"><ol class="list">${r.method.map(x=>`<li>${x}</li>`).join('')}</ol></div><div class="tabPane" data-pane="notes"><p>${r.notes}</p></div><div class="tabPane" data-pane="connections"><h3 style="font-family:Georgia,serif">Techniques</h3><div class="linked">${tech.map(t=>`<button onclick="openTechnique('${t.id}')">${t.title} →</button>`).join('')}</div><h3 style="font-family:Georgia,serif;margin-top:18px">Place</h3><div class="linked"><button onclick="goToPlaceForRecipe('${r.id}')">${r.region} → Atlas</button></div></div></div>`);wireTabs();}
+function openComponent(id){const c=DB.components.find(x=>x.id===id);if(!c)return;show(`<div class="modalBody" style="padding-top:58px"><div class="meta">Reusable component</div><h2>${c.title}</h2><p><span class="badge">${c.type}</span><span class="badge">${c.yield}</span></p><div class="formula"><div><h3>Ingredients</h3><ul>${c.ingredients.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><h3>Method</h3><ol>${c.steps.map(x=>`<li>${x}</li>`).join('')}</ol></div></div><p><b>Atelier note:</b> ${c.notes}</p><h3 style="font-family:Georgia,serif">Used in</h3><div class="linked">${DB.recipes.filter(r=>(r.components||[]).includes(id)).map(r=>`<button onclick="openRecipe('${r.id}')">${r.title} →</button>`).join('')||'<span class="small">No linked recipe yet.</span>'}</div></div>`)}
+function openTechnique(id){const t=DB.techniques.find(x=>x.id===id);if(!t)return;show(`<div class="modalBody" style="padding-top:58px"><div class="meta">Technique library · ${t.family}</div><h2>${t.title}</h2><p>${t.summary}</p><h3 style="font-family:Georgia,serif">Technique steps</h3><ol class="list">${t.steps.map(x=>`<li>${x}</li>`).join('')}</ol><h3 style="font-family:Georgia,serif">Recipes using this technique</h3><div class="linked">${DB.recipes.filter(r=>(r.techniques||[]).includes(id)).map(r=>`<button onclick="openRecipe('${r.id}')">${r.title} →</button>`).join('')||'<span class="small">No linked recipe yet.</span>'}</div></div>`)}
+function openPlace(id){const p=DB.places.find(x=>x.id===id);if(!p)return;const r=DB.recipes.find(x=>x.id===p.recipe);show(`<img class="modalHero" src="${p.image}" alt="${p.label}"><div class="modalBody"><div class="meta">Pastry Atlas · ${p.region}</div><h2>${p.name}</h2><p>${p.label} anchors this location in the Atelier Atlas.</p>${r?`<button class="openBtn" onclick="openRecipe('${r.id}')">Open ${r.title}</button>`:''}</div>`)}
+function goToPlaceForRecipe(rid){const p=DB.places.find(x=>x.recipe===rid);closeModal();switchView('atlas');setTimeout(()=>{if(p)openPlace(p.id)},150)}
+function show(html){$('#modalContent').innerHTML=html;$('#modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){$('#modal').classList.remove('open');document.body.style.overflow=''}
+$('#close').onclick=closeModal;$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+function wireTabs(){$$('.tabs button').forEach(b=>b.onclick=()=>{const root=b.closest('.modalBody');root.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));root.querySelectorAll('.tabPane').forEach(x=>x.classList.remove('active'));b.classList.add('active');root.querySelector(`[data-pane="${b.dataset.tab}"]`).classList.add('active')})}
+function switchView(id){$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));$$('.view').forEach(v=>v.classList.toggle('active',v.id===id));window.scrollTo({top:180,behavior:'smooth'})}
+$$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));
+$('#search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();if(!q){renderAll();return}switchView('recipes');const rs=DB.recipes.filter(r=>JSON.stringify(r).toLowerCase().includes(q));renderRecipes(rs);const cs=DB.components.filter(c=>JSON.stringify(c).toLowerCase().includes(q));const ts=DB.techniques.filter(t=>JSON.stringify(t).toLowerCase().includes(q));if(cs.length||ts.length){$('#recipeGrid').insertAdjacentHTML('beforeend',cs.map(c=>`<article class="libCard"><div class="meta">Component</div><h3>${c.title}</h3><button class="linkBtn" onclick="openComponent('${c.id}')">Open formula →</button></article>`).join('')+ts.map(t=>`<article class="libCard"><div class="meta">Technique</div><h3>${t.title}</h3><button class="linkBtn" onclick="openTechnique('${t.id}')">Open technique →</button></article>`).join(''))}});
+$('#clear').onclick=()=>{$('#search').value='';renderAll()};
+function toast(s){const t=$('#toast');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',2600)}
+function esc(s){return String(s).replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[m]))}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=4').catch(()=>{}))}
+</script>
+</body></html>
